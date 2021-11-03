@@ -7,14 +7,15 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-emotion",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -45,6 +46,17 @@ module.exports = {
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         // graphqlTag: 'default',
       },
+
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Playfair Display`, `Source Sans Pro`, `Lato`, `Merriweather`
+        ],
+        // display: 'swap'
+      }
+    }
+
   ],
 };

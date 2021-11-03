@@ -1,0 +1,57 @@
+.Header {
+	width: 80vw;
+	padding: 1rem 10vw 1rem 10vw;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background-color: var(--contrast-color);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.TitleContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.Title,
+.Subtitle {
+	margin: 0;
+}
+
+.Subtitle {
+	font-size: var(--small-font-size);
+}
+
+.Nav {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.NavList {
+	list-style: none;
+	padding-left: 5rem;
+	width: fit-content;
+	max-width: calc(var(--max-content-width) / 2);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.NavLink {
+	font-family: var(--header-font);
+	font-weight: bold;
+	padding: 0 1rem;
+	text-decoration: none;
+	color: var(--dark-color);
+}
+
+.NavLink:hover,
+.NavLink:focus {
+	text-decoration: underline;
+}
