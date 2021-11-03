@@ -4,7 +4,6 @@ module.exports = {
     title: "template-site",
   },
   plugins: [
-    "gatsby-plugin-theme-ui",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -27,9 +26,24 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
-        isTSX: true, // defaults to false
-        jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
+        isTSX: true,
+        jsxPragma: `jsx`,
+        allExtensions: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `svxot7ob`,
+        dataset: `production`,
+        // a token with read permissions is required
+        // if you have a private dataset
+        // TODO : make data private
+        // token: process.env.SANITY_TOKEN,
+
+        // If the Sanity GraphQL API was deployed using `--tag <name>`,
+        // use `graphqlTag` to specify the tag name. Defaults to `default`.
+        // graphqlTag: 'default',
       },
     },
   ],
