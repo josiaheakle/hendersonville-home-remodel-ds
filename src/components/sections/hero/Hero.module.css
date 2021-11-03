@@ -1,0 +1,12 @@
+.Hero {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ContentContainer {
+	width: 80vw;
+	max-width: var(--max-content-width);
+}
