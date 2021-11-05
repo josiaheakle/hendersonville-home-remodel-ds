@@ -20,7 +20,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images/",
       },
       __key: "images",
     },
@@ -37,16 +37,15 @@ module.exports = {
       options: {
         projectId: `svxot7ob`,
         dataset: `production`,
-        // a token with read permissions is required
-        // if you have a private dataset
-        // TODO : make data private
-        // token: process.env.SANITY_TOKEN,
-
-        // If the Sanity GraphQL API was deployed using `--tag <name>`,
-        // use `graphqlTag` to specify the tag name. Defaults to `default`.
-        // graphqlTag: 'default',
       },
 
+    },
+    {
+      resolve: "gatsby-plugin-sanity-image",
+      options: {
+        projectId: `svxot7ob`,
+        dataset: `production`,
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -54,7 +53,6 @@ module.exports = {
         fonts: [
           `Playfair Display`, `Source Sans Pro`, `Lato`, `Merriweather`
         ],
-        // display: 'swap'
       }
     }
 

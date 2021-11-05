@@ -11,7 +11,7 @@ import { Hero } from "../components/sections/hero/Hero";
 
 interface IndexPageProps {}
 
-const homepageQuery = graphql`
+const HomepageQuery = graphql`
 	query {
 		allSanityHomepage {
 			nodes {
@@ -19,63 +19,38 @@ const homepageQuery = graphql`
 					title
 					subtitle
 					coverImage {
-						_key
-						_rawHotspot
-						_rawCrop
-						_rawAsset
-						_type
-						asset {
-							_id
-							_key
-							_rawMetadata
-							_rawSource
-							_rev
-							_type
-							altText
-							assetId
-							description
-							extension
-							id
-							label
-							size
-							title
-							uploadId
-							url
-							source {
-								_key
-								_type
-								id
-								name
-								url
-							}
-							path
-							sha1hash
-							parent
-							originalFilename
-							mimeType
-						}
 						crop {
-							_key
-							_type
-							bottom
-							left
-							right
 							top
+							right
+							left
+							bottom
 						}
 						hotspot {
-							_key
-							_type
 							height
 							width
 							x
 							y
 						}
+						asset {
+							altText
+							assetId
+							description
+							id
+							label
+							source {
+								id
+								url
+								name
+							}
+							title
+							uploadId
+							url
+							_id
+						}
 					}
 				}
-				about {
-					description
-					title
-				}
+				id
+				pageTitle
 			}
 		}
 	}
@@ -84,9 +59,9 @@ const homepageQuery = graphql`
 const IndexPage: React.FC<IndexPageProps> = ({}) => {
 	return (
 		<StaticQuery
-			query={homepageQuery}
+			query={HomepageQuery}
 			render={(data) => {
-				const heroData = data.allSanityHomepage.nodes[1].hero;
+				const heroData = data.allSanityHomepage.nodes[0].hero;
 				console.log(heroData);
 
 				return (
@@ -102,7 +77,20 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 							headerLogo=""
 							headerLogoAlt=""
 						/>
-						{/* <Hero image={heroData.} /> */}
+						<Hero image={heroData.coverImage} />
+						<div style={{ backgroundColor: "var(--contrast-color)" }}>
+							<h2
+								style={{
+									width: "var(--max-content-width)",
+									margin: "auto",
+								}}
+							>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+								corrupti deserunt soluta qui eum, necessitatibus eius quod
+								dolor, rem quas enim id! Vero tempore ipsam vel tenetur maxime,
+								nam esse?
+							</h2>
+						</div>
 					</div>
 				);
 			}}
