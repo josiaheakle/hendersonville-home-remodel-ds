@@ -5,6 +5,7 @@ body {
 	/* font-family: 'Playfair Display', serif; */
 	/* font-family: 'Source Sans Pro', sans-serif; */
 
+	/* COLORS */
 	--primary-color: #14213d;
 	--highlight-color: #e5e5e5;
 	--contrast-color: #fca311;
@@ -16,15 +17,20 @@ body {
 	--body-font: "Source Sans Pro", sans-serif;
 	--small-font-size: 0.8rem;
 
+	/* MEASURMENTS */
+	--header-height: 4rem;
 	--max-content-width: 64rem;
 	--mobile-width-break: 64rem;
 
+	/* ANIM */
 	--anim-length: 250ms;
 
 	font-family: var(--body-font);
 	margin: 0;
 	padding: 0;
+}
 
+html {
 	overflow-x: hidden;
 }
 

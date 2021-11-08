@@ -1,18 +1,30 @@
 // deps
 import * as React from "react";
 
+// hooks
+import {
+	useIsMobile,
+	useScrollYPosition,
+	useScrollDirection,
+} from "../../../hooks/ReactiveHooks";
+
 // types
 import HeaderLinkType from "../../../types/prop_types/HeaderLinkType";
 
 // css
 import * as css from "./Header.module.css";
+import { MobileNavbar } from "./navbar/MobileNavbar";
+import { Navbar } from "./navbar/Navbar";
 
 // props
 interface HeaderProps extends React.HTMLProps<HTMLElement> {
+	hidden?: boolean;
 	headerTitle: string;
 	headerSubtitle: string;
-	headerLogo: string;
-	headerLogoAlt: string;
+	headerIcon: {
+		src: string;
+		alt: string;
+	};
 	headerLinks: Array<HeaderLinkType>;
 }
 
@@ -20,31 +32,60 @@ const Header: React.FC<HeaderProps> = ({
 	headerTitle,
 	headerSubtitle,
 	headerLinks,
-	headerLogo,
-	headerLogoAlt,
+	headerIcon,
 	className,
 	...props
 }) => {
+	const [isShrunk, setIsShrunk] = React.useState(false);
+
+	const [isMobileOpen, setIsMobileOpen] = React.useState(false);
+	const [isMobileHidden, setIsMobileHidden] = React.useState(false);
+
+	const isMobile = useIsMobile();
+	const scrollY = useScrollYPosition();
+	const scrollDirection = useScrollDirection();
+
+	const checkScroll = () => {
+		if (scrollY > 80) setIsShrunk(true);
+		else setIsShrunk(false);
+	};
+
+	const checkScrollDirection = () => {
+		if (scrollDirection === "down") {
+			setIsMobileHidden(true);
+		} else setIsMobileHidden(false);
+	};
+
+	React.useEffect(() => {
+		checkScroll();
+	}, [scrollY]);
+	React.useEffect(() => {
+		checkScrollDirection();
+	}, [scrollDirection]);
+
 	return (
-		<header className={`${css.Header} ${className}`} {...props}>
-			<div className={`${css.TitleContainer}`}>
-				<img src={headerLogo} alt={headerLogoAlt}></img>
-				<span>
+		<header
+			className={`${css.Header} ${className || ""} ${
+				!isShrunk && !isMobile ? css.large : css.small
+			}`}
+			{...props}
+		>
+			<div className={`${css.HeadingContainer}`}>
+				<img
+					className={`${css.HeadingIcon}`}
+					src={headerIcon.src}
+					alt={headerIcon.alt}
+				></img>
+				<span className={`${css.TitleContainer}`}>
 					<h3 className={`${css.Title}`}>{headerTitle}</h3>
 					<h5 className={`${css.Subtitle}`}>{headerSubtitle}</h5>
 				</span>
 			</div>
-			<nav className={`${css.Nav}`}>
-				<ul className={`${css.NavList}`}>
-					{headerLinks.map((link, i) => (
-						<li className={`${css.NavListElem}`} key={i}>
-							<a className={`${css.NavLink}`} href={`#${link.linkElemId}`}>
-								{link.title}
-							</a>
-						</li>
-					))}
-				</ul>
-			</nav>
+			{isMobile ? (
+				<MobileNavbar links={headerLinks} />
+			) : (
+				<Navbar links={headerLinks} />
+			)}
 		</header>
 	);
 };

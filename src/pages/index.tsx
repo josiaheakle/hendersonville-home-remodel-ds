@@ -1,13 +1,16 @@
 // deps
 import * as React from "react";
+import { graphql, StaticQuery } from "gatsby";
 
 // comps
 import { Header } from "../components/ui/header/Header";
-
-// assets
-import "../assets/index.css";
-import { graphql, StaticQuery } from "gatsby";
 import { Hero } from "../components/sections/hero/Hero";
+
+// imgs
+import JEIcon from "../assets/images/icon.png";
+
+// css
+import "../assets/index.css";
 
 interface IndexPageProps {}
 
@@ -65,7 +68,7 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 				console.log(heroData);
 
 				return (
-					<div>
+					<div style={{ width: "100vw" }}>
 						<Header
 							headerLinks={[
 								{ title: "About", linkElemId: "contact" },
@@ -74,11 +77,126 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 							]}
 							headerTitle="title"
 							headerSubtitle="subtitle"
-							headerLogo=""
-							headerLogoAlt=""
+							headerIcon={{
+								src: JEIcon,
+								alt: "asdf",
+							}}
 						/>
-						<Hero image={heroData.coverImage} />
-						<div style={{ backgroundColor: "var(--contrast-color)" }}>
+						{/* <Hero image={heroData.coverImage} /> */}
+						<div
+							style={{
+								backgroundColor: "var(--primary-color)",
+								color: "var(--light-color)",
+							}}
+						>
+							<h2
+								style={{
+									width: "var(--max-content-width)",
+									margin: "auto",
+								}}
+							>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+								corrupti deserunt soluta qui eum, necessitatibus eius quod
+								dolor, rem quas enim id! Vero tempore ipsam vel tenetur maxime,
+								nam esse?
+							</h2>
+						</div>
+						<div
+							style={{
+								backgroundColor: "var(--primary-color)",
+								color: "var(--light-color)",
+							}}
+						>
+							<h2
+								style={{
+									width: "var(--max-content-width)",
+									margin: "auto",
+								}}
+							>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+								corrupti deserunt soluta qui eum, necessitatibus eius quod
+								dolor, rem quas enim id! Vero tempore ipsam vel tenetur maxime,
+								nam esse?
+							</h2>
+						</div>{" "}
+						<div
+							style={{
+								backgroundColor: "var(--primary-color)",
+								color: "var(--light-color)",
+							}}
+						>
+							<h2
+								style={{
+									width: "var(--max-content-width)",
+									margin: "auto",
+								}}
+							>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+								corrupti deserunt soluta qui eum, necessitatibus eius quod
+								dolor, rem quas enim id! Vero tempore ipsam vel tenetur maxime,
+								nam esse?
+							</h2>
+						</div>{" "}
+						<div
+							style={{
+								backgroundColor: "var(--primary-color)",
+								color: "var(--light-color)",
+							}}
+						>
+							<h2
+								style={{
+									width: "var(--max-content-width)",
+									margin: "auto",
+								}}
+							>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+								corrupti deserunt soluta qui eum, necessitatibus eius quod
+								dolor, rem quas enim id! Vero tempore ipsam vel tenetur maxime,
+								nam esse?
+							</h2>
+						</div>{" "}
+						<div
+							style={{
+								backgroundColor: "var(--primary-color)",
+								color: "var(--light-color)",
+							}}
+						>
+							<h2
+								style={{
+									width: "var(--max-content-width)",
+									margin: "auto",
+								}}
+							>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+								corrupti deserunt soluta qui eum, necessitatibus eius quod
+								dolor, rem quas enim id! Vero tempore ipsam vel tenetur maxime,
+								nam esse?
+							</h2>
+						</div>
+						<div
+							style={{
+								backgroundColor: "var(--primary-color)",
+								color: "var(--light-color)",
+							}}
+						>
+							<h2
+								style={{
+									width: "var(--max-content-width)",
+									margin: "auto",
+								}}
+							>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+								corrupti deserunt soluta qui eum, necessitatibus eius quod
+								dolor, rem quas enim id! Vero tempore ipsam vel tenetur maxime,
+								nam esse?
+							</h2>
+						</div>
+						<div
+							style={{
+								backgroundColor: "var(--primary-color)",
+								color: "var(--light-color)",
+							}}
+						>
 							<h2
 								style={{
 									width: "var(--max-content-width)",

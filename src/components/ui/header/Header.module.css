@@ -1,5 +1,7 @@
 .Header {
 	width: 80vw;
+	height: var(--header-height);
+
 	padding: 1rem 10vw 1rem 10vw;
 
 	position: fixed;
@@ -11,11 +13,33 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	transition: height var(--anim-length);
+}
+
+.large.Header {
+	height: calc(var(--header-height) + 4rem);
+}
+
+.HeadingContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.HeadingIcon {
+	transition: padding var(--anim-length);
+}
+
+.large.Header .HeadingIcon {
+	padding: 0.5rem;
 }
 
 .TitleContainer {
+	margin-left: 2rem;
+
 	display: flex;
 	flex-direction: column;
+	align-self: center;
 }
 
 .Title,
@@ -25,36 +49,10 @@
 
 .Subtitle {
 	font-size: var(--small-font-size);
+	transition: opacity var(--anim-length), height var(--anim-length);
 }
 
-.Nav {
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-}
-
-.NavList {
-	list-style: none;
-	padding-left: 5rem;
-	width: fit-content;
-	max-width: calc(var(--max-content-width) / 2);
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
-.NavListElem {
-}
-
-.NavLink {
-	font-family: var(--header-font);
-	font-weight: bold;
-	padding: 0 1rem;
-	text-decoration: none;
-	color: var(--dark-color);
-}
-
-.NavLink:hover,
-.NavLink:focus {
-	text-decoration: underline;
+.small.Header .Subtitle {
+	opacity: 0;
+	height: 0;
 }
