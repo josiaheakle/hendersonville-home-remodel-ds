@@ -34,7 +34,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ links }) => {
 							className={css.MobileNavLink}
 							onClick={handleLinkClick}
 							key={index}
-							href={`${link.linkElemId}`}
+							href={link.linkElemId ? `#${link.linkElemId}` : link.page}
 						>
 							{link.title}
 						</a>

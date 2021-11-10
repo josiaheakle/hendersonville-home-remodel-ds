@@ -21,7 +21,8 @@
 }
 
 .NavLink {
-	color: var(--dark-color);
+	color: var(--light-color);
+	font-size: var(--h5);
 	text-decoration: none;
 }
 

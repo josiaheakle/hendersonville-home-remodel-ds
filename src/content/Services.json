@@ -1,0 +1,47 @@
+{
+    "title": "Our Services",
+    "subtitle": "See What We Offer",
+    "services" : [
+        {
+            "title": "service 1",
+            "summary": "hello",
+            "additionalText": "",
+            "image": {
+                "src": "",
+                "alt": ""
+            }
+        },{
+            "title": "service 2",
+            "summary": "hello",
+            "additionalText": "",
+            "image": {
+                "src": "",
+                "alt": ""
+            }
+        },{
+            "title": "service 3",
+            "summary": "hello",
+            "additionalText": "",
+            "image": {
+                "src": "",
+                "alt": ""
+            }
+        },{
+            "title": "service 4",
+            "summary": "hello",
+            "additionalText": "",
+            "image": {
+                "src": "",
+                "alt": ""
+            }
+        },{
+            "title": "service 5",
+            "summary": "hello",
+            "additionalText": "",
+            "image": {
+                "src": "",
+                "alt": ""
+            }
+        }
+    ]
+}

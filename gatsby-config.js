@@ -9,12 +9,11 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-emotion",
     "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/assets/images/icon.png",
       },
     },
     {
@@ -31,21 +30,6 @@ module.exports = {
         isTSX: true,
         jsxPragma: `jsx`,
         allExtensions: true,
-      },
-    },
-    {
-      resolve: `gatsby-source-sanity`,
-      options: {
-        projectId: `svxot7ob`,
-        dataset: `production`,
-      },
-
-    },
-    {
-      resolve: "gatsby-plugin-sanity-image",
-      options: {
-        projectId: `svxot7ob`,
-        dataset: `production`,
       },
     },
     {

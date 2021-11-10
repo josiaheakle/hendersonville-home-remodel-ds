@@ -1,0 +1,37 @@
+{
+    "url": "",
+    "title": "Title",
+    "subtitle": "Subtitle",
+    "description": "",
+    "image": {
+        "src": "",
+        "alt": ""
+    },
+    "icon": {
+        "src": "",
+        "alt": "Brand Logo"
+    },
+    "pages": [
+        {
+            "title": "Home",
+            "page": "/",
+            "linkElemId" : "Home" 
+        },
+        {
+            "title": "About",
+            "page": "/about",
+            "linkElemId" : "About" 
+        },
+        {
+            "title": "Services",
+            "page": "/services",
+            "linkElemId" : "Services" 
+        },
+        {
+            "title": "Contact",
+            "page": "/contact",
+            "linkElemId" : "Contact" 
+        }
+    ]
+}
+

@@ -11,6 +11,9 @@ import {
 // types
 import HeaderLinkType from "../../../types/prop_types/HeaderLinkType";
 
+// img
+import BrandIcon from "../../../assets/images/icon.png";
+
 // css
 import * as css from "./Header.module.css";
 import { MobileNavbar } from "./navbar/MobileNavbar";
@@ -26,6 +29,7 @@ interface HeaderProps extends React.HTMLProps<HTMLElement> {
 		alt: string;
 	};
 	headerLinks: Array<HeaderLinkType>;
+	isH1: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -34,6 +38,7 @@ const Header: React.FC<HeaderProps> = ({
 	headerLinks,
 	headerIcon,
 	className,
+	isH1,
 	...props
 }) => {
 	const [isShrunk, setIsShrunk] = React.useState(false);
@@ -69,18 +74,27 @@ const Header: React.FC<HeaderProps> = ({
 		<header
 			className={`${css.Header} ${className || ""} ${
 				!isShrunk && !isMobile ? css.large : css.small
-			} ${isMobileHidden ? css.MobileHidden : ""}`}
+			} ${isMobileHidden && isMobile ? css.MobileHidden : ""}`}
 			{...props}
 		>
 			<div className={`${css.HeadingContainer}`}>
 				<img
 					className={`${css.HeadingIcon}`}
-					src={headerIcon.src}
+					src={BrandIcon}
 					alt={headerIcon.alt}
 				></img>
 				<span className={`${css.TitleContainer}`}>
-					<h3 className={`${css.Title}`}>{headerTitle}</h3>
-					<h5 className={`${css.Subtitle}`}>{headerSubtitle}</h5>
+					{isH1 ? (
+						<>
+							<h1 className={`${css.Title}`}>{headerTitle}</h1>
+							<h2 className={`${css.Subtitle}`}>{headerSubtitle}</h2>
+						</>
+					) : (
+						<>
+							<h3 className={`${css.Title}`}>{headerTitle}</h3>
+							<h4 className={`${css.Subtitle}`}>{headerSubtitle}</h4>
+						</>
+					)}
 				</span>
 			</div>
 			{isMobile ? (

@@ -9,13 +9,10 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
-	const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault();
-
-		const target = e.target as HTMLAnchorElement;
-		const href = target.href;
-
-		document.getElementById(href)?.scrollIntoView({ behavior: "smooth" });
+	const handleLinkClick = (index: number) => {
+		document
+			.getElementById(links[index].linkElemId || "")
+			?.scrollIntoView({ behavior: "smooth" });
 	};
 
 	return (
@@ -25,9 +22,12 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
 					<li className={css.NavListItem} key={index}>
 						<a
 							className={css.NavLink}
-							onClick={handleLinkClick}
+							onClick={(e) => {
+								e.preventDefault();
+								handleLinkClick(index);
+							}}
 							key={index}
-							href={link.linkElemId}
+							href={link.linkElemId ? `${link.linkElemId}` : link.page}
 						>
 							{link.title}
 						</a>

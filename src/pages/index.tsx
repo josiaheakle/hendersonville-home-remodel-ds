@@ -1,161 +1,54 @@
 // deps
 import * as React from "react";
-import { graphql, StaticQuery } from "gatsby";
 
 // comps
-import { Header } from "../components/sections/header/Header";
+import { PageTemplate } from "../components/templates/PageTemplate";
 import { Hero } from "../components/sections/hero/Hero";
 import { Services } from "../components/sections/services/Services";
 import { About } from "../components/sections/about/About";
 import { Contact } from "../components/sections/contact/Contact";
-import { Footer } from "../components/sections/footer/Footer";
 
-// imgs
-import JEIcon from "../assets/images/icon.png";
+// types
+import { SiteData as SiteDataType } from "../types/content_types/SiteData";
+import { HeroData as HeroDataType } from "../types/content_types/Hero";
+import { AboutData as AboutDataType } from "../types/content_types/About";
+import { ServicesData as ServicesDataType } from "../types/content_types/Services";
+import { ContactData as ContactDataType } from "../types/content_types/Contact";
+
+// content
+import siteData from "../content/SiteData.json";
+import heroData from "../content/Hero.json";
+import aboutData from "../content/About.json";
+import servicesData from "../content/Services.json";
+import contactData from "../content/Contact.json";
 
 // css
 import "../assets/index.css";
 
 interface IndexPageProps {}
 
-const HomepageQuery = graphql`
-	query {
-		allSanityHomepage {
-			nodes {
-				hero {
-					title
-					subtitle
-					coverImage {
-						crop {
-							top
-							right
-							left
-							bottom
-						}
-						hotspot {
-							height
-							width
-							x
-							y
-						}
-						asset {
-							altText
-							assetId
-							description
-							id
-							label
-							source {
-								id
-								url
-								name
-							}
-							title
-							uploadId
-							url
-						}
-					}
-				}
-				about {
-					title
-					summary
-					subtitle
-					mainText
-				}
-			}
-		}
-		allSanitySiteSettings {
-			nodes {
-				id
-				siteTitle
-			}
-		}
-		allSanityServices {
-			nodes {
-				title
-				services {
-					imagePreview {
-						asset {
-							altText
-							assetId
-							description
-							extension
-							id
-							label
-							url
-							uploadId
-							title
-							size
-							sha1hash
-							path
-							originalFilename
-							mimeType
-						}
-						crop {
-							top
-							right
-							bottom
-							left
-						}
-						hotspot {
-							y
-							width
-							height
-							x
-						}
-					}
-					mainText
-					subtitle
-					summary
-					title
-				}
-			}
-		}
-	}
-`;
-
 const IndexPage: React.FC<IndexPageProps> = ({}) => {
+	siteData as SiteDataType;
+	heroData as HeroDataType;
+	aboutData as AboutDataType;
+	servicesData as ServicesDataType;
+	contactData as ContactDataType;
 	return (
-		<StaticQuery
-			query={HomepageQuery}
-			render={(data) => {
-				const heroData = data.allSanityHomepage.nodes[0].hero;
-				const aboutData = data.allSanityHomepage.nodes[0].about;
-				console.log({ data });
-				console.log(heroData);
-
-				return (
-					<div style={{ width: "100vw" }}>
-						<Header
-							headerLinks={[
-								{ title: "About", linkElemId: "contact" },
-								{ title: "Examples", linkElemId: "contact" },
-								{ title: "Contact", linkElemId: "contact" },
-							]}
-							headerTitle="title"
-							headerSubtitle="subtitle"
-							headerIcon={{
-								src: JEIcon,
-								alt: "asdf",
-							}}
-						/>
-						<Hero
-							image={heroData.coverImage}
-							title={heroData.title}
-							subtitle={heroData.subtitle}
-							linkTo="#services"
-						/>
-						<About
-							title={aboutData.title}
-							subtitle={aboutData.subtitle}
-							mainText={aboutData.mainText}
-						/>
-						<Services />
-						<Contact />
-						<Footer />
-					</div>
-				);
-			}}
-		/>
+		<PageTemplate isHomepage={true} siteData={siteData}>
+			<Hero
+				image={heroData.image}
+				title={heroData.title}
+				subtitle={heroData.subtitle}
+				linkTo="#services"
+			/>
+			<About
+				title={aboutData.title}
+				subtitle={aboutData.subtitle}
+				mainText={aboutData.summary}
+			/>
+			<Services />
+			<Contact />
+		</PageTemplate>
 	);
 };
 

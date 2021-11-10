@@ -1,4 +1,5 @@
 export default interface HeaderLinkType {
 	title: string;
-	linkElemId: string;
+	page?: string;
+	linkElemId?: string;
 }

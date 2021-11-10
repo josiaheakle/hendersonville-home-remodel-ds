@@ -34,10 +34,11 @@
 
 .HeadingIcon {
 	transition: padding var(--anim-length);
+	padding: 0.25rem;
 }
 
 .large.Header .HeadingIcon {
-	padding: 0.5rem;
+	padding: 1rem;
 }
 
 .TitleContainer {
@@ -51,6 +52,7 @@
 .Title,
 .Subtitle {
 	margin: 0;
+	font-size: var(--h3);
 }
 
 .Subtitle {
