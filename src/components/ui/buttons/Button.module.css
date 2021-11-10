@@ -1,0 +1,9 @@
+.Button {
+	cursor: pointer;
+	padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+	background-color: var(--contrast-color);
+	font-weight: bold;
+	color: var(--light-color);
+	border-radius: 2rem;
+	border: none;
+}

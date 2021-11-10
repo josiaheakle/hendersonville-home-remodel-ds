@@ -39,10 +39,13 @@ const useScrollYPosition = () => {
 const useScrollDirection = () => {
 	const scrollY = useScrollYPosition();
 	const [lastScroll, setLastScroll] = useState(scrollY);
-	const [scrollDirection, setScrollDirection] = useState<"up" | "down">();
+	const [scrollDirection, setScrollDirection] = useState<
+		"up" | "down" | "center"
+	>();
 	useEffect(() => {
 		if (scrollY > lastScroll) setScrollDirection("down");
-		else setScrollDirection("up");
+		else if (scrollY < lastScroll) setScrollDirection("up");
+		else setScrollDirection("center");
 		setLastScroll(scrollY);
 	}, [scrollY]);
 	return scrollDirection;

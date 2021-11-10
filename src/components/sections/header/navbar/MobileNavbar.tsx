@@ -3,6 +3,7 @@ import * as React from "react";
 
 // types
 import HeaderLinkType from "../../../../types/prop_types/HeaderLinkType";
+import { Button } from "../../../ui/buttons/Button";
 
 // css
 import * as css from "./Navbar.module.css";
@@ -39,6 +40,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ links }) => {
 						</a>
 					</li>
 				))}
+				<Button className={css.CallNowButton}>Call Now</Button>
 			</ul>
 			<div
 				onClick={() => {

@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({
 	const [isShrunk, setIsShrunk] = React.useState(false);
 
 	const [isMobileOpen, setIsMobileOpen] = React.useState(false);
-	const [isMobileHidden, setIsMobileHidden] = React.useState(false);
+	const [isMobileHidden, setIsMobileHidden] = React.useState(true);
 
 	const isMobile = useIsMobile();
 	const scrollY = useScrollYPosition();
@@ -51,9 +51,11 @@ const Header: React.FC<HeaderProps> = ({
 	};
 
 	const checkScrollDirection = () => {
-		if (scrollDirection === "down") {
-			setIsMobileHidden(true);
-		} else setIsMobileHidden(false);
+		console.log({ scrollDirection });
+
+		if (scrollDirection === "up") {
+			setIsMobileHidden(false);
+		} else setIsMobileHidden(true);
 	};
 
 	React.useEffect(() => {
@@ -67,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({
 		<header
 			className={`${css.Header} ${className || ""} ${
 				!isShrunk && !isMobile ? css.large : css.small
-			}`}
+			} ${isMobileHidden ? css.MobileHidden : ""}`}
 			{...props}
 		>
 			<div className={`${css.HeadingContainer}`}>

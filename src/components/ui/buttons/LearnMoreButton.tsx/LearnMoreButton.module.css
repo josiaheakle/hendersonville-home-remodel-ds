@@ -1,0 +1,14 @@
+/* .Button {
+} */
+
+.Link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.DownArrow {
+	fill: var(--light-color);
+	height: 3rem;
+	width: 3rem;
+}

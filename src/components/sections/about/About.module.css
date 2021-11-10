@@ -1,0 +1,19 @@
+.About {
+	/* color: var(--light-color); */
+}
+
+.AboutContent {
+	color: var(--light-color);
+}
+
+.Title {
+	font-size: var(--h3);
+	margin-top: 0;
+	/* text-align: right; */
+}
+
+.Subtitle {
+	font-size: var(--h5);
+	margin-bottom: 0;
+	text-align: left;
+}

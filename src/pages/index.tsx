@@ -3,8 +3,12 @@ import * as React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
 // comps
-import { Header } from "../components/ui/header/Header";
+import { Header } from "../components/sections/header/Header";
 import { Hero } from "../components/sections/hero/Hero";
+import { Services } from "../components/sections/services/Services";
+import { About } from "../components/sections/about/About";
+import { Contact } from "../components/sections/contact/Contact";
+import { Footer } from "../components/sections/footer/Footer";
 
 // imgs
 import JEIcon from "../assets/images/icon.png";
@@ -48,12 +52,62 @@ const HomepageQuery = graphql`
 							title
 							uploadId
 							url
-							_id
 						}
 					}
 				}
+				about {
+					title
+					summary
+					subtitle
+					mainText
+				}
+			}
+		}
+		allSanitySiteSettings {
+			nodes {
 				id
-				pageTitle
+				siteTitle
+			}
+		}
+		allSanityServices {
+			nodes {
+				title
+				services {
+					imagePreview {
+						asset {
+							altText
+							assetId
+							description
+							extension
+							id
+							label
+							url
+							uploadId
+							title
+							size
+							sha1hash
+							path
+							originalFilename
+							mimeType
+						}
+						crop {
+							top
+							right
+							bottom
+							left
+						}
+						hotspot {
+							y
+							width
+							height
+							x
+						}
+					}
+					mainText
+					subtitle
+					summary
+					title
+				}
 			}
 		}
 	}
@@ -65,6 +119,8 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 			query={HomepageQuery}
 			render={(data) => {
 				const heroData = data.allSanityHomepage.nodes[0].hero;
+				const aboutData = data.allSanityHomepage.nodes[0].about;
+				console.log({ data });
 				console.log(heroData);
 
 				return (
@@ -82,7 +138,20 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 								alt: "asdf",
 							}}
 						/>
-						{/* <Hero image={heroData.coverImage} /> */}
+						<Hero
+							image={heroData.coverImage}
+							title={heroData.title}
+							subtitle={heroData.subtitle}
+							linkTo="#services"
+						/>
+						<About
+							title={aboutData.title}
+							subtitle={aboutData.subtitle}
+							mainText={aboutData.mainText}
+						/>
+						<Services />
+						<Contact />
+						<Footer />
 					</div>
 				);
 			}}
