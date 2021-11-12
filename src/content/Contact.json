@@ -1,10 +1,10 @@
 {
-    "phoneNumber" : "",
+    "phoneNumber" : "+1(234)567-8910",
     "email" : "",
     "address" : {
-        "street" : "",
-        "city" : "",
-        "state" : "",
-        "zip" : ""
+        "street" : "1012 Glenbrook Way #1040",
+        "city" : "Hendersonville",
+        "state" : "TN",
+        "zip" : "37075"
     }
 }

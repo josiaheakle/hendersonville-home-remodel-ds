@@ -18,8 +18,10 @@ import BrandIcon from "../../../assets/images/icon.png";
 import * as css from "./Header.module.css";
 import { MobileNavbar } from "./navbar/MobileNavbar";
 import { Navbar } from "./navbar/Navbar";
+import { ContactInfo } from "./ContactInfo";
 
 // props
+
 interface HeaderProps extends React.HTMLProps<HTMLElement> {
 	hidden?: boolean;
 	headerTitle: string;
@@ -98,9 +100,12 @@ const Header: React.FC<HeaderProps> = ({
 				</span>
 			</div>
 			{isMobile ? (
-				<MobileNavbar links={headerLinks} />
+				<MobileNavbar isHomepage={isHomepage} links={headerLinks} />
 			) : (
-				<Navbar links={headerLinks} />
+				<div className={`${css.NavContainer} ${isShrunk ? css.hidden : ""}`}>
+					<ContactInfo hidden={isShrunk} />
+					<Navbar isHomepage={isHomepage} links={headerLinks} />
+				</div>
 			)}
 		</header>
 	);

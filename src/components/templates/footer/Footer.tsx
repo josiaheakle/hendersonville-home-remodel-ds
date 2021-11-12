@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ className, siteData, ...props }) => {
 			</span>
 			<span id="created-by" className={css.CreatedBy}>
 				WEBSITE CREATED BY <br />
-				<a className="created-by-link" href="josiaheakle.com">
+				<a className="created-by-link" href="https://www.josiaheakle.com">
 					JOSIAH EAKLE
 				</a>
 			</span>

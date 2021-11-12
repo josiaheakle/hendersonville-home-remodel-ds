@@ -8,6 +8,7 @@ interface Service {
 
 interface ServicesData {
 	title: string;
+	subtitle: string;
 	summary: string;
 	services: Array<Service>;
 }

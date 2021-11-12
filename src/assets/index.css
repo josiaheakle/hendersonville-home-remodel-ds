@@ -21,6 +21,8 @@ html {
 	--light-color: #fff6ed;
 	--dark-color: #000;
 
+	--header-color: #593421ea;
+
 	/* 
 #8F67CF
 #4B4453
@@ -35,7 +37,7 @@ html {
 	/* FONTS */
 	--header-font: "Playfair Display", serif;
 	--body-font: "Source Sans Pro", sans-serif;
-	--small-font-size: 0.8rem;
+	--small-font-size: 0.85rem;
 
 	/* MEASURMENTS */
 	--header-height: 6rem;
@@ -106,7 +108,7 @@ h5 {
 }
 
 small,
-.text_small {
+.small-text {
 	font-size: var(--small-font-size);
 }
 
@@ -136,6 +138,16 @@ small,
 	width: 60vw;
 	max-width: var(--max-content-width);
 	margin: auto;
+}
+
+.page {
+	width: 100vw;
+	min-height: calc(100vh - var(--header-height));
+	/* padding: 2rem 0px 0px 0px; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 @media only screen and (max-width: 64rem) {

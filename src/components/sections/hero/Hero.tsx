@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ image, subtitle, title }) => {
 	const isMobile = useIsMobile();
 
 	return (
-		<div id="Home" className={`${css.Hero} section`}>
+		<section id="Home" className={`${css.Hero} section`}>
 			<div className={`${css.ContentContainer}`}>
 				<div className={`${css.BgImage}`}>
 					<StaticImage
@@ -33,13 +33,13 @@ const Hero: React.FC<HeroProps> = ({ image, subtitle, title }) => {
 				</div>
 				<div className={`${css.Content}`}>
 					<span className={`${css.Subtitle}`}>{subtitle}</span>
-					<h1 className={`${css.Title}`}>{title}</h1>
+					<h2 className={`${css.Title}`}>{title}</h2>
 					<CallNowButton />
 				</div>
 				{/* {!isMobile ? <ContactForm className={`${css.ContactForm}`} /> : null} */}
 			</div>
 			<LearnMoreButton linkTo="#About" className={`${css.LearnMoreButton}`} />
-		</div>
+		</section>
 	);
 };
 

@@ -10,10 +10,11 @@ import { CallNowButton } from "../../../ui/buttons/CallNowButton/CallNowButton";
 import * as css from "./Navbar.module.css";
 
 interface MobileNavbarProps {
+	isHomepage?: boolean;
 	links: Array<HeaderLinkType>;
 }
 
-const MobileNavbar: React.FC<MobileNavbarProps> = ({ links }) => {
+const MobileNavbar: React.FC<MobileNavbarProps> = ({ links, isHomepage }) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	const handleLinkClick = (index: number) => {
@@ -31,11 +32,13 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ links }) => {
 						<a
 							className={css.MobileNavLink}
 							onClick={(e) => {
-								e.preventDefault();
-								handleLinkClick(index);
+								if (isHomepage) {
+									e.preventDefault();
+									handleLinkClick(index);
+								}
 							}}
 							key={index}
-							href={link.linkElemId ? `#${link.linkElemId}` : link.page}
+							href={isHomepage ? `#${link.linkElemId}` : link.page}
 						>
 							{link.title}
 						</a>

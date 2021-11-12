@@ -5,10 +5,12 @@ import HeaderLinkType from "../../../../types/prop_types/HeaderLinkType";
 import * as css from "./Navbar.module.css";
 
 interface NavbarProps {
+	isHomepage?: boolean;
+
 	links: Array<HeaderLinkType>;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ links }) => {
+const Navbar: React.FC<NavbarProps> = ({ links, isHomepage }) => {
 	const handleLinkClick = (index: number) => {
 		document
 			.getElementById(links[index].linkElemId || "")
@@ -23,11 +25,13 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
 						<a
 							className={css.NavLink}
 							onClick={(e) => {
-								e.preventDefault();
-								handleLinkClick(index);
+								if (isHomepage) {
+									e.preventDefault();
+									handleLinkClick(index);
+								}
 							}}
 							key={index}
-							href={link.linkElemId ? `${link.linkElemId}` : link.page}
+							href={isHomepage ? `#${link.linkElemId}` : link.page}
 						>
 							{link.title}
 						</a>

@@ -9,7 +9,7 @@
 	top: 0;
 	left: 0;
 
-	background-color: var(--primary-color);
+	background-color: var(--header-color);
 	color: var(--light-color);
 
 	display: flex;
@@ -41,18 +41,25 @@
 	padding: 1rem;
 }
 
+.large.Header .TitleContainer {
+	justify-content: space-evenly;
+}
+
 .TitleContainer {
-	margin-left: 2rem;
+	height: 100%;
+	margin-left: 1rem;
 
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-self: center;
 }
 
 .Title,
 .Subtitle {
 	margin: 0;
-	font-size: var(--h3);
+	font-size: var(--h4);
+	padding-right: 1rem;
 }
 
 .Subtitle {
@@ -63,4 +70,35 @@
 .small.Header .Subtitle {
 	opacity: 0;
 	height: 0;
+}
+
+.NavContainer {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding-left: 1rem;
+}
+
+.NavContainer.hidden {
+	/* flex-direction: row; */
+	justify-content: center;
+}
+
+.ContactInfo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 2.5rem;
+	transition: opacity var(--anim-length), height var(--anim-length);
+}
+
+.ContactInfo.hidden {
+	opacity: 0;
+	height: 0;
+}
+
+.ContactInfo address {
+	text-align: end;
 }

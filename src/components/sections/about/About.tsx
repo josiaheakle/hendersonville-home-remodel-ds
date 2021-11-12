@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
+import { ReadMoreLink } from "../../ui/links/ReadMoreLink";
 
 import * as css from "./About.module.css";
 
@@ -20,7 +21,10 @@ const About: React.FC<AboutProps> = ({
 	isOwnPage,
 }) => {
 	return (
-		<section id="About" className={`section ${css.About}`}>
+		<section
+			id="About"
+			className={`${isOwnPage ? "page" : "section"} ${css.About}`}
+		>
 			<div className={`${css.AboutContent}`}>
 				{subtitle ? (
 					<span className={`${css.Subtitle}`}>{subtitle}</span>
@@ -33,7 +37,11 @@ const About: React.FC<AboutProps> = ({
 					className={`${css.Image}`}
 				/>
 				<p>{summary}</p>
-				{isOwnPage ? <p>{additionalText}</p> : null}
+				{isOwnPage ? (
+					<p>{additionalText}</p>
+				) : (
+					<ReadMoreLink href="/about">Read More</ReadMoreLink>
+				)}
 			</div>
 		</section>
 	);
