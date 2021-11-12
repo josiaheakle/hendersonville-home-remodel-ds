@@ -3,45 +3,24 @@
     "subtitle": "See What We Offer",
     "services" : [
         {
-            "title": "service 1",
-            "summary": "hello",
-            "additionalText": "",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "title": "Good Deck",
+            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
+
         },{
-            "title": "service 2",
-            "summary": "hello",
-            "additionalText": "",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "title": "Other Deck",
+            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
+
         },{
-            "title": "service 3",
-            "summary": "hello",
-            "additionalText": "",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "title": "service 3",            
+            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
+
         },{
-            "title": "service 4",
-            "summary": "hello",
-            "additionalText": "",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "title": "service 4",            
+            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
+  
         },{
-            "title": "service 5",
-            "summary": "hello",
-            "additionalText": "",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "title": "service 5",            
+            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
         }
     ]
 }

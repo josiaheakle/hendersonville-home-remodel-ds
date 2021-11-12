@@ -4,12 +4,11 @@ interface Service {
 	title: string;
 	summary: string;
 	additionalText: string;
-	image: Image;
 }
 
 interface ServicesData {
 	title: string;
-	subtitle: string;
+	summary: string;
 	services: Array<Service>;
 }
 

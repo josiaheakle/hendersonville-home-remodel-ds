@@ -5,5 +5,4 @@ export interface AboutData {
 	subtitle: string;
 	summary: string;
 	additionalText: string;
-	image: Image;
 }

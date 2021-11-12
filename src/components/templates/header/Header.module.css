@@ -1,7 +1,7 @@
 .Header {
 	z-index: 100;
 	width: 80vw;
-	height: var(--header-height);
+	height: calc(var(--header-height) - 2rem);
 
 	padding: 1rem 10vw 1rem 10vw;
 

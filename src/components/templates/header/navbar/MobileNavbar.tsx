@@ -4,6 +4,7 @@ import * as React from "react";
 // types
 import HeaderLinkType from "../../../../types/prop_types/HeaderLinkType";
 import { Button } from "../../../ui/buttons/Button";
+import { CallNowButton } from "../../../ui/buttons/CallNowButton/CallNowButton";
 
 // css
 import * as css from "./Navbar.module.css";
@@ -15,14 +16,11 @@ interface MobileNavbarProps {
 const MobileNavbar: React.FC<MobileNavbarProps> = ({ links }) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 
-	const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault();
+	const handleLinkClick = (index: number) => {
 		setIsOpen(false);
-
-		const target = e.target as HTMLAnchorElement;
-		const href = target.href;
-
-		document.getElementById(href)?.scrollIntoView({ behavior: "smooth" });
+		document
+			.getElementById(links[index].linkElemId || "")
+			?.scrollIntoView({ behavior: "smooth" });
 	};
 
 	return (
@@ -32,7 +30,10 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ links }) => {
 					<li className={css.MobileNavListItem} key={index}>
 						<a
 							className={css.MobileNavLink}
-							onClick={handleLinkClick}
+							onClick={(e) => {
+								e.preventDefault();
+								handleLinkClick(index);
+							}}
 							key={index}
 							href={link.linkElemId ? `#${link.linkElemId}` : link.page}
 						>
@@ -40,7 +41,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ links }) => {
 						</a>
 					</li>
 				))}
-				<Button className={css.CallNowButton}>Call Now</Button>
+				<CallNowButton />
 			</ul>
 			<div
 				onClick={() => {

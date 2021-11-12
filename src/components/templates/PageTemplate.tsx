@@ -29,10 +29,10 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
 				headerSubtitle={siteData.subtitle}
 				headerLinks={siteData.pages}
 				headerIcon={siteData.icon}
-				isH1={isHomepage}
+				isHomepage={isHomepage}
 			/>
 			{children}
-			<Footer />
+			<Footer siteData={siteData} />
 		</div>
 	);
 };

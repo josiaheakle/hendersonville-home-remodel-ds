@@ -24,6 +24,8 @@ import contactData from "../content/Contact.json";
 
 // css
 import "../assets/index.css";
+import { ContactForm } from "../components/sections/contact/ContactForm";
+import about from "./about";
 
 interface IndexPageProps {}
 
@@ -31,21 +33,12 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 	siteData as SiteDataType;
 	heroData as HeroDataType;
 	aboutData as AboutDataType;
-	servicesData as ServicesDataType;
+	// servicesData as ServicesDataType;
 	contactData as ContactDataType;
 	return (
 		<PageTemplate isHomepage={true} siteData={siteData}>
-			<Hero
-				image={heroData.image}
-				title={heroData.title}
-				subtitle={heroData.subtitle}
-				linkTo="#services"
-			/>
-			<About
-				title={aboutData.title}
-				subtitle={aboutData.subtitle}
-				mainText={aboutData.summary}
-			/>
+			<Hero {...heroData} linkTo="#services" />
+			<About {...aboutData} />
 			<Services />
 			<Contact />
 		</PageTemplate>

@@ -1,5 +1,15 @@
-/* .Button {
-} */
+.Button {
+	font-size: 1.25rem;
+	cursor: pointer;
+}
+
+.Button:hover > .Link .Title {
+	transform: scale(110%);
+}
+
+.Button:hover > .Link .DownArrow {
+	transform: translateY(0.5rem) scale(125%);
+}
 
 .Link {
 	display: flex;
@@ -7,8 +17,15 @@
 	align-items: center;
 }
 
+.Title {
+	transition: transform var(--anim-length);
+}
+
 .DownArrow {
-	fill: var(--light-color);
+	fill: var(--contrast-color);
+
+	transition: transform var(--anim-length);
+
 	height: 3rem;
 	width: 3rem;
 }

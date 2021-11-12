@@ -1,22 +1,11 @@
 .Hero {
 	overflow-y: hidden;
-	color: var(--light-color);
+	height: calc(100vh - var(--header-height));
 	position: relative;
 }
 
-.HeroBackground {
-	position: fixed;
-	z-index: -10;
-	height: 100vh;
-	width: 100vw;
-	background: linear-gradient(
-		var(--gradient-color-one),
-		var(--gradient-color-two)
-	);
-}
-
 .HeroImage {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -27,29 +16,54 @@
 }
 
 .Content {
-	width: 80vw;
+	/* width: 80vw; */
 	max-width: var(--max-content-width);
 }
 
-.Content h1 {
+.ContentContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0 10vw 0 10vw;
+	color: var(--light-color);
+	/* position: relative; */
+}
+
+.BgImage {
+	z-index: -10;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 10rem;
+}
+
+.Title {
 	margin-top: 0;
 }
 
-.Content h2 {
+.Subtitle {
 	margin-bottom: 0;
 	font-size: var(--h5);
+	/* font-weight: ; */
+}
+
+.ContactForm {
+	margin: 0 2rem 0 2rem;
 }
 
 .LearnMoreButton {
-	cursor: pointer;
+	bottom: 0;
+	padding: 1rem;
+	background-color: var(--light-color);
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	color: var(--dark-color);
 	position: absolute;
-	font-weight: bold;
-	font-size: 1.2rem;
-	bottom: 4rem;
 	transition: transform var(--anim-length);
 }
 
-.LearnMoreButton:hover,
+/* .LearnMoreButton:hover,
 .LearnMoreButton:focus-visible {
 	transform: scale(1.2);
-}
+} */

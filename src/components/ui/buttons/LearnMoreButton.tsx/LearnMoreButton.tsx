@@ -17,15 +17,15 @@ const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({
 	...props
 }) => {
 	return (
-		<div {...props} className={`${css.Button} ${className}`}>
+		<div {...props} className={`${css.Button} ${className ?? ""}`}>
 			{linkTo?.charAt(0) === "#" ? (
 				<Link className={`${css.Link}`} to={linkTo.slice(1)} smooth={true}>
-					<span>get started</span>
+					<span className={`${css.Title}`}>Learn More</span>
 					<DownArrow className={`${css.DownArrow}`} />
 				</Link>
 			) : (
 				<a className={`${css.Link}`} href={linkTo}>
-					<span>get started</span>
+					<span className={`${css.Title}`}>Learn More</span>
 					<DownArrow className={`${css.DownArrow}`} />
 				</a>
 			)}

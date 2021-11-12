@@ -29,7 +29,7 @@ interface HeaderProps extends React.HTMLProps<HTMLElement> {
 		alt: string;
 	};
 	headerLinks: Array<HeaderLinkType>;
-	isH1: boolean;
+	isHomepage: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({
 	headerLinks,
 	headerIcon,
 	className,
-	isH1,
+	isHomepage,
 	...props
 }) => {
 	const [isShrunk, setIsShrunk] = React.useState(false);
@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({
 	return (
 		<header
 			className={`${css.Header} ${className || ""} ${
-				!isShrunk && !isMobile ? css.large : css.small
+				!isShrunk && !isMobile && isHomepage ? css.large : css.small
 			} ${isMobileHidden && isMobile ? css.MobileHidden : ""}`}
 			{...props}
 		>
@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({
 					alt={headerIcon.alt}
 				></img>
 				<span className={`${css.TitleContainer}`}>
-					{isH1 ? (
+					{isHomepage ? (
 						<>
 							<h1 className={`${css.Title}`}>{headerTitle}</h1>
 							<h2 className={`${css.Subtitle}`}>{headerSubtitle}</h2>

@@ -9,6 +9,7 @@ interface TextAreaInputProps extends React.HTMLAttributes<HTMLTextAreaElement> {
 
 export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 	label,
+	className,
 	...props
 }) => {
 	const [isFocued, setFocused] = React.useState<boolean>(false);
@@ -57,7 +58,7 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 					{label}
 				</label>
 				<textarea
-					className={`${css.Input}`}
+					className={`${css.Input} ${className ?? ""}`}
 					ref={inputRef}
 					{...props}
 					onChange={onChange}

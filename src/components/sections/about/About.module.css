@@ -3,8 +3,9 @@
 }
 
 .AboutContent {
-	padding: 0 8rem 0 8rem;
-	color: var(--light-color);
+	padding: 2rem 8vw 2rem 8vw;
+	max-width: var(--max-content-width);
+	/* color: var(--light-color); */
 }
 .AboutText {
 	padding-left: 2rem;
@@ -14,7 +15,7 @@
 .Image {
 	max-width: 30vw;
 	float: left;
-	margin: 0 2rem 2rem 0;
+	margin: 1rem 1.5rem 1rem 0;
 }
 
 .Title {
