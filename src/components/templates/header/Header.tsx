@@ -76,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({
 		<header
 			className={`${css.Header} ${className || ""} ${
 				!isShrunk && !isMobile && isHomepage ? css.large : css.small
-			} ${isMobileHidden && isMobile ? css.MobileHidden : ""}`}
+			} ${isMobileHidden && isMobile && !isMobileOpen ? css.MobileHidden : ""}`}
 			{...props}
 		>
 			<a href="/" className={`${css.HeadingContainer}`}>
@@ -101,6 +101,7 @@ const Header: React.FC<HeaderProps> = ({
 			</a>
 			{isMobile ? (
 				<MobileNavbar
+					setMobileOpen={(bool) => setIsMobileOpen(bool)}
 					activePage={activePage}
 					isHomepage={isHomepage}
 					links={headerLinks}

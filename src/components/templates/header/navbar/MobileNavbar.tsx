@@ -13,12 +13,14 @@ interface MobileNavbarProps {
 	isHomepage?: boolean;
 	links: Array<HeaderLinkType>;
 	activePage: string;
+	setMobileOpen: (b: boolean) => void;
 }
 
 const MobileNavbar: React.FC<MobileNavbarProps> = ({
 	links,
 	isHomepage,
 	activePage,
+	setMobileOpen,
 }) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 
@@ -28,6 +30,10 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({
 			.getElementById(links[index].linkElemId || "")
 			?.scrollIntoView({ behavior: "smooth" });
 	};
+
+	React.useEffect(() => {
+		setMobileOpen(isOpen);
+	}, [isOpen]);
 
 	return (
 		<nav className={css.MobileNav}>
