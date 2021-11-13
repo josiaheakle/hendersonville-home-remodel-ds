@@ -9,18 +9,24 @@ import { ContactForm } from "./ContactForm";
 import { ContactData } from "../../../types/content_types/Contact";
 import { StaticImage } from "gatsby-plugin-image";
 
-interface ContactProps {}
+interface ContactProps {
+	isOwnPage: boolean;
+}
 
-const Contact: React.FC<ContactProps> = ({}) => {
+const Contact: React.FC<ContactProps> = ({ isOwnPage }) => {
 	contactData as ContactData;
 	return (
 		<section id="Contact" className={`${css.Contact}`}>
-			<StaticImage
-				className={`${css.BgImage}`}
-				layout="fullWidth"
-				src="../../../assets/images/hero.jpg"
-				alt=""
-			/>
+			{isOwnPage ? (
+				<div className={css.BgImageContainer}>
+					<StaticImage
+						className={`${css.BgImage}`}
+						layout="fullWidth"
+						src="../../../assets/images/hero.jpg"
+						alt=""
+					/>
+				</div>
+			) : null}
 			<div className={`${css.Heading}`}>
 				<span className={`subtitle ${css.Subtitle}`}>How Can We Help?</span>
 				<h2 className={`${css.Title} title`}>Contact Us</h2>

@@ -30,13 +30,11 @@ const About: React.FC<AboutProps> = ({
 				) : null}
 				<h2 className={`${css.Title} title`}>{title}</h2>
 				<StaticImage
-					layout="constrained"
+					layout="fullWidth"
 					src="../../../assets/images/about.jpg"
 					alt="placeholder"
-					// aspectRatio={1.5}
 					className={`${css.Image}`}
 				/>
-
 				<p>{summary}</p>
 				{isOwnPage ? (
 					<p>{additionalText}</p>
