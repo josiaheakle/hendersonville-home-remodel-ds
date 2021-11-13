@@ -1,8 +1,8 @@
 {
-  "name": "template-site",
+  "name": "dsf-template-site",
   "version": "1.0.0",
   "private": true,
-  "description": "template-site",
+  "description": "Template site for a digital storefront.",
   "author": "Josiah Eakle",
   "keywords": [
     "gatsby"

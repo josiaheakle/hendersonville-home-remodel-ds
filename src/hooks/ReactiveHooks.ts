@@ -24,7 +24,7 @@ const useIsMobile = () => {
 };
 
 const useScrollYPosition = () => {
-	const [scrollY, setScrollY] = useState(window.scrollY);
+	const [scrollY, setScrollY] = useState(0);
 	const updateScroll = () => {
 		setScrollY(window.scrollY);
 	};
