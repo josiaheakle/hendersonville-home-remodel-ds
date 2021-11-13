@@ -18,7 +18,7 @@ import BrandIcon from "../../../assets/images/icon.png";
 import * as css from "./Header.module.css";
 import { MobileNavbar } from "./navbar/MobileNavbar";
 import { Navbar } from "./navbar/Navbar";
-import { ContactInfo } from "./ContactInfo";
+import { ContactInfo } from "../../sections/contact/ContactInfo";
 
 // props
 
@@ -58,11 +58,9 @@ const Header: React.FC<HeaderProps> = ({
 	};
 
 	const checkScrollDirection = () => {
-		console.log({ scrollDirection });
-
-		if (scrollDirection === "up") {
-			setIsMobileHidden(false);
-		} else setIsMobileHidden(true);
+		if (scrollDirection === "down") {
+			setIsMobileHidden(true);
+		} else setIsMobileHidden(false);
 	};
 
 	React.useEffect(() => {
@@ -79,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({
 			} ${isMobileHidden && isMobile ? css.MobileHidden : ""}`}
 			{...props}
 		>
-			<div className={`${css.HeadingContainer}`}>
+			<a href="/" className={`${css.HeadingContainer}`}>
 				<img
 					className={`${css.HeadingIcon}`}
 					src={BrandIcon}
@@ -98,12 +96,19 @@ const Header: React.FC<HeaderProps> = ({
 						</>
 					)}
 				</span>
-			</div>
+			</a>
 			{isMobile ? (
 				<MobileNavbar isHomepage={isHomepage} links={headerLinks} />
 			) : (
-				<div className={`${css.NavContainer} ${isShrunk ? css.hidden : ""}`}>
-					<ContactInfo hidden={isShrunk} />
+				<div
+					className={`${css.NavContainer} ${
+						isShrunk || !isHomepage ? css.hidden : ""
+					}`}
+				>
+					<ContactInfo
+						className="small-text"
+						hidden={isShrunk || !isHomepage}
+					/>
 					<Navbar isHomepage={isHomepage} links={headerLinks} />
 				</div>
 			)}

@@ -1,5 +1,5 @@
 .Button {
-	font-size: 1.25rem;
+	font-size: var(--h5);
 	cursor: pointer;
 }
 
@@ -28,4 +28,14 @@
 
 	height: 3rem;
 	width: 3rem;
+}
+
+@media only screen and (max-width: 64rem) {
+	.Button {
+		font-size: 1rem;
+	}
+	.DownArrow {
+		height: 2rem;
+		width: 2rem;
+	}
 }

@@ -23,7 +23,10 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
 	...props
 }) => {
 	return (
-		<div className={`${className ?? ""} page`} {...props}>
+		<div
+			className={`${className ?? ""} ${!isHomepage ? "page" : ""}`}
+			{...props}
+		>
 			<SEOTemplate siteData={siteData} />
 			<Header
 				headerTitle={siteData.title}

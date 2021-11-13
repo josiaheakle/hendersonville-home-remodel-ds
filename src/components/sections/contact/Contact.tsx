@@ -1,16 +1,24 @@
 import * as React from "react";
+import { ContactInfo } from "./ContactInfo";
 import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
+
+import contactData from "../../../content/Contact.json";
 
 import * as css from "./Contact.module.css";
 import { ContactForm } from "./ContactForm";
+import { ContactData } from "../../../types/content_types/Contact";
 
 interface ContactProps {}
 
 const Contact: React.FC<ContactProps> = ({}) => {
+	contactData as ContactData;
 	return (
 		<section id="Contact" className={`${css.Contact}`}>
-			<span className={`subtitle ${css.Subtitle}`}>How Can We Help?</span>
-			<h2 className={`${css.Title} title`}>Contact Us</h2>
+			<div className={`${css.Heading}`}>
+				<span className={`subtitle ${css.Subtitle}`}>How Can We Help?</span>
+				<h2 className={`${css.Title} title`}>Contact Us</h2>
+				<ContactInfo className={css.ContactInfo} />
+			</div>
 			<div className={`${css.ContactBanner}`}>
 				{/*  className={`${css.Contact}`} */}
 				<CallNowButton />

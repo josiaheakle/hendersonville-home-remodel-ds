@@ -1,20 +1,18 @@
 .Services {
-	/* background-color: var(--primary-color); */
+	background-color: var(--light-color);
 	padding: 4rem 0 4rem 0;
-	text-align: center;
+	/* text-align: center; */
 	width: 100vw;
 	/* color: var(--light-color); */
 }
 
 .ServicesContainer {
-	display: grid;
-	grid-template-rows: auto;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-auto-flow: row;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 
 	margin: 0 10vw 0 10vw;
-
-	justify-items: center;
 }
 
 .Title {
@@ -28,7 +26,7 @@
 }
 
 .Service {
-	background-color: var(--highlight-color);
+	background-color: var(--primary-color);
 	width: 14rem;
 	/* border-radius: 1rem; */
 	border-radius: var(--border-radius);
@@ -44,25 +42,33 @@
 }
 
 .ServiceTitle {
+	color: var(--contrast-color);
 }
 
 .ServiceSubtitle {
 }
 
 .ServiceDescription {
+	color: var(--light-color);
 }
 
 .ServiceImage {
 }
 
 .ReadMore {
-	justify-self: flex-end;
-	color: var(--contrast-color);
+	/* justify-self: flex-end; */
 }
 
 @media only screen and (max-width: 64rem) {
 	.ServicesContainer {
-		display: flex;
-		flex-direction: column;
+		/* display: flex;
+		flex-direction: column; */
+		margin: 0 20vw 0 20vw;
+	}
+
+	.Title,
+	.Subtitle {
+		align-self: flex-start;
+		margin-left: 18vw;
 	}
 }

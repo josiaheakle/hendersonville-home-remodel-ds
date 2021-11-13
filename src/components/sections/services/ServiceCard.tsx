@@ -25,7 +25,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 		<div className={css.Service}>
 			<h3 className={css.ServiceTitle}>{title}</h3>
 			<p className={css.ServiceDescription}>{getSummary()}</p>
-			<a href="" className={css.ReadMore}>
+			<a href="" className="link">
 				Read More
 			</a>
 		</div>

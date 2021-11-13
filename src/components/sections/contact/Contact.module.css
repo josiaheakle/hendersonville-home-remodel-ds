@@ -5,14 +5,31 @@
 	position: relative;
 }
 
+.Heading {
+	margin-left: 20vw;
+	/* margin-bottom: 1rem; */
+	padding: 1rem;
+	max-width: fit-content;
+	color: var(--light-color);
+	backdrop-filter: blur(0.5rem);
+	border-radius: var(--border-radius);
+	background-color: var(--transparent-color);
+}
+
 .Title {
 	margin-top: 0;
 	font-size: var(--h1);
 }
 
-.Subtitle,
-.Title {
-	padding-left: 20vw;
+.ContactInfo {
+	width: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.ContactInfo > a {
+	padding-bottom: 0.5rem;
 }
 
 .ContactBanner {
@@ -24,7 +41,7 @@
 	justify-content: space-evenly;
 	background-color: var(--primary-color);
 	position: absolute;
-	bottom: 10rem;
+	bottom: 8rem;
 	height: 6rem;
 }
 
@@ -35,45 +52,10 @@
 
 .Contact .Form {
 	position: relative;
+	background-color: var(--transparent-color);
+	backdrop-filter: blur(0.5rem);
+
 	top: -10rem;
-}
-
-@media only screen and (max-width: 64rem) {
-	.Subtitle,
-	.Title {
-		padding-left: 0;
-	}
-	.Contact {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: 5rem;
-		padding-top: 2rem;
-	}
-
-	.ContactBanner {
-		position: relative;
-		flex-direction: column;
-		height: fit-content;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-		width: fit-content;
-		top: 0;
-		bottom: 0;
-		border-radius: var(--border-radius);
-	}
-
-	.Seperator {
-		color: var(--light-color);
-		padding: 1rem;
-	}
-
-	.Contact .Form {
-		position: initial;
-		top: 0;
-		bottom: 0;
-		padding: 0;
-	}
 }
 
 .Form {
@@ -96,4 +78,68 @@
 
 .FormSubmit {
 	margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 64rem) {
+	.Subtitle,
+	.Title {
+		padding-left: 0;
+		align-self: flex-start;
+		/* margin-left: 20vw; */
+	}
+
+	.Heading {
+		margin: 0;
+	}
+
+	.Contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 5rem;
+		padding-top: 2rem;
+	}
+
+	.Heading {
+		margin-bottom: 2rem;
+	}
+
+	.ContactBanner {
+		background-color: var(--header-color);
+		position: relative;
+		flex-direction: column;
+		height: fit-content;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		width: fit-content;
+		top: 0;
+		bottom: 0;
+		border-radius: var(--border-radius);
+	}
+
+	.ContactInfo {
+		width: auto;
+		padding: 0;
+		margin-bottom: 1rem;
+		/* text-align: center; */
+		/* align-items: center; */
+	}
+
+	.Seperator {
+		color: var(--light-color);
+		padding: 1rem;
+	}
+
+	.Contact .Form {
+		background-color: transparent;
+		color: var(--light-color);
+		position: initial;
+		top: 0;
+		bottom: 0;
+		padding: 0;
+	}
+
+	.FormHeader {
+		color: var(--light-color);
+	}
 }

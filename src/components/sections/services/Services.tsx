@@ -2,6 +2,7 @@ import * as React from "react";
 
 import servicesData from "../../../content/Services.json";
 import { ServicesData } from "../../../types/content_types/Services";
+import { Button } from "../../ui/buttons/Button";
 import { ReadMoreLink } from "../../ui/links/ReadMoreLink";
 import { ServiceCard } from "./ServiceCard";
 
@@ -14,10 +15,7 @@ interface ServicesProps {
 const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 	servicesData as ServicesData;
 	return (
-		<section
-			id="Services"
-			className={`${css.Services} ${isOwnPage ? "page" : "section"}`}
-		>
+		<section id="Services" className={`${css.Services} section`}>
 			<span className={`${css.Subtitle}`}>{servicesData.subtitle}</span>
 			<h2 className={`title ${css.Title}`}>{servicesData.title}</h2>
 			<div className={` ${css.ServicesContainer}`}>
@@ -27,10 +25,12 @@ const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 						<ServiceCard title={service.title} description={service.summary} />
 					);
 				})}
-				{isOwnPage ? null : (
-					<ReadMoreLink href="/services">See All</ReadMoreLink>
-				)}
 			</div>
+			{isOwnPage ? null : (
+				<a href="/services">
+					<Button className={css.ReadMore}>See All</Button>
+				</a>
+			)}
 		</section>
 	);
 };
