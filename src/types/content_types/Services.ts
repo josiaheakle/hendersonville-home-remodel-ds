@@ -1,6 +1,7 @@
 import { Image } from "./reusable/Image";
 
 interface Service {
+	slug: string;
 	title: string;
 	summary: string;
 	additionalText: string;

@@ -7,6 +7,7 @@
 
 .Heading {
 	padding-right: 1rem;
+	font-size: var(--h5);
 }
 
 .List {

@@ -6,12 +6,19 @@ import * as css from "./CallNowButton.module.css";
 import contactData from "../../../../content/Contact.json";
 import { ContactData } from "../../../../types/content_types/Contact";
 
-interface CallNowButtonProps {}
+interface CallNowButtonProps extends React.HTMLProps<HTMLAnchorElement> {}
 
-const CallNowButton: React.FC<CallNowButtonProps> = ({}) => {
+const CallNowButton: React.FC<CallNowButtonProps> = ({
+	className,
+	...props
+}) => {
 	contactData as ContactData;
 	return (
-		<a href={`tel:${contactData.phoneNumber}`}>
+		<a
+			{...props}
+			className={`${className || ""}`}
+			href={`tel:${contactData.phoneNumber}`}
+		>
 			<Button className={css.Button}>Call Now</Button>
 		</a>
 	);

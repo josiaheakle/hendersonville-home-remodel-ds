@@ -1,0 +1,48 @@
+.BgImage {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	min-height: 100vh;
+	z-index: -10;
+}
+
+.ServiceCard {
+	width: 60vw;
+	padding: 2rem;
+	background-color: var(--transparent-color);
+	backdrop-filter: blur(0.5rem);
+	border-radius: var(--border-radius);
+	color: var(--light-color);
+}
+
+.Title {
+	color: var(--primary-color);
+}
+
+.BackLink {
+	position: absolute;
+	left: 2rem;
+	top: calc(var(--header-height) + 2rem);
+	color: var(--dark-color);
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	font-size: var(--h5);
+	font-weight: bold;
+	transition: font-size var(--anim-length);
+}
+
+.BackArrow {
+	transform: rotate(90deg);
+	fill: var(--contrast-color);
+	padding: 1rem;
+}
+
+.BackLink:hover,
+.BackLink:focus-visible {
+	text-decoration: underline;
+	font-size: 1.5rem;
+}

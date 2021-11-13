@@ -9,13 +9,13 @@ import { splitAtSpace } from "../../../utlis/string-utils";
 interface ServiceCardProps {
 	title: string;
 	description: string;
-	image?: Image;
+	slug: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
 	title,
 	description,
-	image,
+	slug,
 }) => {
 	const getSummary = (): string => {
 		return `${splitAtSpace(description, 100)}...`;
@@ -25,7 +25,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 		<div className={css.Service}>
 			<h3 className={css.ServiceTitle}>{title}</h3>
 			<p className={css.ServiceDescription}>{getSummary()}</p>
-			<a href="" className="link">
+			<a href={`/services/${slug}`} className="link">
 				Read More
 			</a>
 		</div>

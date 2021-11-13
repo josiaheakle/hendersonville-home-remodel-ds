@@ -13,7 +13,18 @@
 	color: var(--light-color);
 	backdrop-filter: blur(0.5rem);
 	border-radius: var(--border-radius);
-	background-color: var(--transparent-color);
+	background-color: var(--header-color);
+}
+
+.BgImage {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	min-height: 100vh;
+	z-index: -10;
 }
 
 .Title {
@@ -39,7 +50,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
-	background-color: var(--primary-color);
+	background-color: var(--highlight-color);
 	position: absolute;
 	bottom: 8rem;
 	height: 6rem;

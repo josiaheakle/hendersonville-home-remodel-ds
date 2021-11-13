@@ -32,6 +32,7 @@ interface HeaderProps extends React.HTMLProps<HTMLElement> {
 	};
 	headerLinks: Array<HeaderLinkType>;
 	isHomepage: boolean;
+	activePage: string;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -41,6 +42,7 @@ const Header: React.FC<HeaderProps> = ({
 	headerIcon,
 	className,
 	isHomepage,
+	activePage,
 	...props
 }) => {
 	const [isShrunk, setIsShrunk] = React.useState(false);
@@ -98,7 +100,11 @@ const Header: React.FC<HeaderProps> = ({
 				</span>
 			</a>
 			{isMobile ? (
-				<MobileNavbar isHomepage={isHomepage} links={headerLinks} />
+				<MobileNavbar
+					activePage={activePage}
+					isHomepage={isHomepage}
+					links={headerLinks}
+				/>
 			) : (
 				<div
 					className={`${css.NavContainer} ${
@@ -109,7 +115,11 @@ const Header: React.FC<HeaderProps> = ({
 						className="small-text"
 						hidden={isShrunk || !isHomepage}
 					/>
-					<Navbar isHomepage={isHomepage} links={headerLinks} />
+					<Navbar
+						activePage={activePage}
+						isHomepage={isHomepage}
+						links={headerLinks}
+					/>
 				</div>
 			)}
 		</header>

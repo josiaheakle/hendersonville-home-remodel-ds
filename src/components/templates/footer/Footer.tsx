@@ -1,5 +1,6 @@
 import * as React from "react";
 import { SiteData } from "../../../types/content_types/SiteData";
+import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 
 import * as css from "./Footer.module.css";
 import { Sitemap } from "./sitemap/Sitemap";
@@ -10,17 +11,18 @@ interface FooterProps extends React.HTMLProps<HTMLDivElement> {
 
 const Footer: React.FC<FooterProps> = ({ className, siteData, ...props }) => {
 	return (
-		<footer {...props} className={`${className} ${css.Footer}`}>
+		<footer {...props} className={`${className || ""} ${css.Footer}`}>
 			<Sitemap className={`${css.Sitemap}`} />
+			<CallNowButton className={`${css.CallButton}`} />
 			<span id="created-by" className={css.CreatedBy}>
-				WEBSITE CREATED BY <br />
+				Website created by <br />
 				<a className="link" href="https://www.josiaheakle.com">
-					JOSIAH EAKLE
+					Josiah Eakle
 				</a>
 			</span>
 			<span id="brand-copyright">
-				© 2021 {siteData.title.toUpperCase()}.
-				<br /> ALL RIGHTS RESERVED.
+				© 2021 {siteData.title}.
+				<br /> All Rights Reserved.
 			</span>
 		</footer>
 	);

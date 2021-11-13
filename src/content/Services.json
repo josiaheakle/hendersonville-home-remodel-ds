@@ -3,24 +3,10 @@
     "subtitle": "See What We Offer",
     "services" : [
         {
-            "title": "Good Deck",
-            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
-
-        },{
-            "title": "Other Deck",
-            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
-
-        },{
-            "title": "service 3",            
-            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
-
-        },{
-            "title": "service 4",            
-            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
-  
-        },{
-            "title": "service 5",            
-            "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta atque laudantium minus, sunt odio nobis. Similique provident magni dignissimos facilis qui eum assumenda officiis dolores sint, eius laborum adipisci cumque?"
+            "title": "Home Remodeling",
+            "summary": "this is the summary text",
+            "additionalText": "this is additional text",
+            "slug": "home-remodel"
         }
     ]
 }

@@ -6,11 +6,11 @@ import * as css from "./Navbar.module.css";
 
 interface NavbarProps {
 	isHomepage?: boolean;
-
+	activePage: string;
 	links: Array<HeaderLinkType>;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ links, isHomepage }) => {
+const Navbar: React.FC<NavbarProps> = ({ links, isHomepage, activePage }) => {
 	const handleLinkClick = (index: number) => {
 		document
 			.getElementById(links[index].linkElemId || "")
@@ -23,7 +23,9 @@ const Navbar: React.FC<NavbarProps> = ({ links, isHomepage }) => {
 				{links.map((link, index) => (
 					<li className={css.NavListItem} key={index}>
 						<a
-							className={css.NavLink}
+							className={`${css.NavLink} ${
+								activePage === link.page ? css.ActiveLink : ""
+							}`}
 							onClick={(e) => {
 								if (isHomepage) {
 									e.preventDefault();

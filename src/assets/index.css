@@ -28,13 +28,16 @@ html {
 	--dark-color: #000; */
 
 	--primary-color: #34416fff;
-	--highlight-color: #565c76;
+	--highlight-color: #8f8095ff;
 	--contrast-color: #ee9535ff;
 	/* CHANGE SVG COLORS IF CONTRAST COLOR CHANGES */
 	--light-color: #f5f3f6;
 	--dark-color: #0b0704ff;
 
-	--transparent-color: #565c76e5;
+	/* 8F8095ff */
+	/* 6f4f34 */
+
+	--transparent-color: #8f8095e5;
 	--header-color: #34416fe5;
 
 	/* 

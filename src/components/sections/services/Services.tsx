@@ -1,7 +1,10 @@
 import * as React from "react";
 
 import servicesData from "../../../content/Services.json";
-import { ServicesData } from "../../../types/content_types/Services";
+import {
+	Service as ServiceType,
+	ServicesData,
+} from "../../../types/content_types/Services";
 import { Button } from "../../ui/buttons/Button";
 import { ReadMoreLink } from "../../ui/links/ReadMoreLink";
 import { ServiceCard } from "./ServiceCard";
@@ -9,7 +12,7 @@ import { ServiceCard } from "./ServiceCard";
 import * as css from "./Services.module.css";
 
 interface ServicesProps {
-	isOwnPage: boolean;
+	isOwnPage?: boolean;
 }
 
 const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
@@ -22,7 +25,11 @@ const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 				{servicesData.services.map((service, index) => {
 					if (!isOwnPage && index > 2) return null;
 					return (
-						<ServiceCard title={service.title} description={service.summary} />
+						<ServiceCard
+							slug={service.slug}
+							title={service.title}
+							description={service.summary}
+						/>
 					);
 				})}
 			</div>

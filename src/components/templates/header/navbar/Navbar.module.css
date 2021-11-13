@@ -113,3 +113,7 @@
 	margin: 0.25rem;
 	background-color: var(--light-color);
 }
+
+.ActiveLink {
+	color: var(--contrast-color);
+}

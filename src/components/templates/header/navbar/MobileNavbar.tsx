@@ -12,9 +12,14 @@ import * as css from "./Navbar.module.css";
 interface MobileNavbarProps {
 	isHomepage?: boolean;
 	links: Array<HeaderLinkType>;
+	activePage: string;
 }
 
-const MobileNavbar: React.FC<MobileNavbarProps> = ({ links, isHomepage }) => {
+const MobileNavbar: React.FC<MobileNavbarProps> = ({
+	links,
+	isHomepage,
+	activePage,
+}) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	const handleLinkClick = (index: number) => {
@@ -30,7 +35,9 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ links, isHomepage }) => {
 				{links.map((link, index) => (
 					<li className={css.MobileNavListItem} key={index}>
 						<a
-							className={css.MobileNavLink}
+							className={`${css.MobileNavLink} ${
+								activePage === link.page ? css.ActiveLink : ""
+							}`}
 							onClick={(e) => {
 								if (isHomepage) {
 									e.preventDefault();
