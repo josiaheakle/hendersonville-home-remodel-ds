@@ -21,9 +21,9 @@ const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 		<>
 			<span className={`${css.Subtitle}`}>{servicesData.subtitle}</span>
 			{isOwnPage ? (
-				<h1 className={`title ${css.Title}`}>{servicesData.title}</h1>
+				<h1 className={`${css.Title}`}>{servicesData.title}</h1>
 			) : (
-				<h2 className={`title ${css.Title}`}>{servicesData.title}</h2>
+				<h2 className={`${css.Title}`}>{servicesData.title}</h2>
 			)}
 			<div className={` ${css.ServicesContainer}`}>
 				{servicesData.services.map((service, index) => {

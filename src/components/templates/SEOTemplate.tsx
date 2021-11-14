@@ -10,7 +10,12 @@ interface SEOTemplateProps {
 
 const SEOTemplate: React.FC<SEOTemplateProps> = ({ siteData }) => {
 	return (
-		<Helmet title={siteData.title}>
+		<Helmet
+			title={siteData.title}
+			htmlAttributes={{
+				lang: "en",
+			}}
+		>
 			<meta name="description" content={siteData.description} />
 			<meta name="image" content={siteData.image.src} />
 			<meta property="og:url" content={siteData.url} />

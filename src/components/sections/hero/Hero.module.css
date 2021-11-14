@@ -25,7 +25,7 @@
 	background-color: var(--transparent-color);
 	border-radius: var(--border-radius);
 
-	backdrop-filter: blur(0.25rem);
+	backdrop-filter: blur(0.1rem);
 }
 
 .ContentContainer {
@@ -48,11 +48,14 @@
 
 .Title {
 	margin-top: 0;
+	color: var(--contrast-color);
 }
 
 .Subtitle {
 	margin-bottom: 0;
 	font-size: var(--h5);
+
+	color: var(--dark-color);
 	/* font-weight: ; */
 }
 

@@ -19,7 +19,7 @@
 }
 
 .Title {
-	color: var(--primary-color);
+	color: var(--contrast-color);
 }
 
 .BackLink {

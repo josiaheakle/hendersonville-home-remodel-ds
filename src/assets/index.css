@@ -1,55 +1,27 @@
 html {
-	/* font-family: 'Lato', sans-serif; */
-	/* font-family: 'Merriweather', serif; */
-	/* font-family: 'Playfair Display', serif; */
-	/* font-family: 'Source Sans Pro', sans-serif; */
-
-	/*  */
-	/* COLORS */
-	/* --primary-color: #0074ab;
-	--highlight-color: #00a9e3;
-	--contrast-color: #00700e;
-	--light-color: #ffffff;
-	--dark-color: #3f4a3c;
-
-	--gradient-color-one: #0074ab;
-	--gradient-color-two: #c95995; */
-
-	--carrot-orange: #ee9535ff;
-	--dark-cornflower-blue: #34416fff;
-	--dark-olive-green: #576a19ff;
-	--languid-lavender: #dbd3deff;
-	--smoky-black: #0b0704ff;
-
-	/* --primary-color: #593421;
-	--highlight-color: #dfe0df;
-	--contrast-color: #dc743d;
-	--light-color: #fff6ed;
-	--dark-color: #000; */
-
-	--primary-color: #34416fff;
+	/* 	--primary-color: #34416fff;
 	--highlight-color: #8f8095ff;
 	--contrast-color: #ee9535ff;
-	/* CHANGE SVG COLORS IF CONTRAST COLOR CHANGES */
 	--light-color: #f5f3f6;
+	--dark-color: #0b0704ff; */
+
+	--cafe-au-lait: #aa7a49ff;
+	--baby-blue: #95d6f2ff;
+	--snow: #fbf8f6ff;
+	--grullo: #a89785ff;
+	--coffee: #735135ff;
+
+	--primary-color: #735135ff;
+	--highlight-color: #dfe0df;
+	--contrast-color: #f69333;
+
+	--background-color: #a89785ff;
+	/* CHANGE SVG COLORS IF CONTRAST COLOR CHANGES */
+	--light-color: #fbf8f6ff;
 	--dark-color: #0b0704ff;
 
-	/* 8F8095ff */
-	/* 6f4f34 */
-
-	--transparent-color: #8f8095e5;
-	--header-color: #34416fe5;
-
-	/* 
-#8F67CF
-#4B4453
-#B0A8B9
-#D0533D
-#931B11
- */
-
-	--gradient-color-one: #744f8d;
-	--gradient-color-two: #62a394;
+	--transparent-color: #fbf8f6e5;
+	--header-color: #735135e5;
 
 	/* FONTS */
 	--header-font: "Playfair Display", serif;
@@ -79,6 +51,7 @@ html {
 	font-family: var(--body-font);
 	margin: 0;
 	padding: 0;
+	font-display: swap;
 }
 
 body {

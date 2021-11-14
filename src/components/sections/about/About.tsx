@@ -24,7 +24,7 @@ const About: React.FC<AboutProps> = ({
 	const content = (
 		<div className={`${css.AboutContent}`}>
 			{subtitle ? <span className={`${css.Subtitle}`}>{subtitle}</span> : null}
-			<h2 className={`${css.Title} title`}>{title}</h2>
+			<h2 className={`${css.Title}`}>{title}</h2>
 			<StaticImage
 				layout="constrained"
 				src="../../../assets/images/about.jpg"
@@ -36,7 +36,9 @@ const About: React.FC<AboutProps> = ({
 				<p>{additionalText}</p>
 			) : (
 				<div className={`${css.ReadMoreContainer}`}>
-					<ReadMoreLink href="/about">Read More</ReadMoreLink>
+					<ReadMoreLink title="About Page" href="/about">
+						More About Us
+					</ReadMoreLink>
 				</div>
 			)}
 		</div>

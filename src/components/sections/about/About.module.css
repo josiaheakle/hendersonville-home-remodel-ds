@@ -25,6 +25,8 @@
 .Title {
 	font-size: var(--h1);
 	margin-top: 0;
+	color: var(--contrast-color);
+
 	/* text-align: right; */
 }
 

@@ -15,15 +15,12 @@ const Footer: React.FC<FooterProps> = ({ className, siteData, ...props }) => {
 			<Sitemap className={`${css.Sitemap}`} />
 			<CallNowButton className={`${css.CallButton}`} />
 			<span id="created-by" className={css.CreatedBy}>
-				Website created by <br />
+				Website created by{" "}
 				<a className="link" href="https://www.josiaheakle.com">
 					Josiah Eakle
 				</a>
 			</span>
-			<span id="brand-copyright">
-				© 2021 {siteData.title}.
-				<br /> All Rights Reserved.
-			</span>
+			<span id="brand-copyright">© 2021 {siteData.title}.</span>
 		</footer>
 	);
 };

@@ -38,6 +38,7 @@
 
 .HeadingIcon {
 	transition: padding var(--anim-length);
+	max-height: 8rem;
 	height: inherit;
 	width: auto;
 	padding: 0.25rem;

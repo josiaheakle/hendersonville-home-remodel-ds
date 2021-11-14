@@ -16,10 +16,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...props }) => {
 	return (
 		<form {...props} className={`${className ?? ""} ${css.Form}`}>
 			<span className={`${css.FormHeader}`}>Send us a message!</span>
-			<TextInput label="Full Name" />
-			<TextInput label="Phone Number" />
-			<TextInput label="Email" />
-			<TextAreaInput type="textarea" label="Message" />
+			<TextInput type="text" title="Full Name" label="Full Name" />
+			<TextInput type="tel" title="Phone Number" label="Phone Number" />
+			<TextInput type="email" title="Email" label="Email" />
+			<TextAreaInput type="textarea" title="Message Content" label="Message" />
 			<Button className={`${css.FormSubmit}`}>Send</Button>
 		</form>
 	);
