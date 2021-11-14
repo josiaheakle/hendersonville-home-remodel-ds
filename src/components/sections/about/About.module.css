@@ -3,7 +3,7 @@
 }
 
 .AboutContent {
-	padding: 2rem 8vw 2rem 8vw;
+	padding: 2rem 12vw 2rem 12vw;
 	max-width: var(--max-content-width);
 	/* color: var(--light-color); */
 }
@@ -34,6 +34,12 @@
 	text-align: left;
 }
 
+.Title,
+.Subtitle {
+	/* padding-left: 4vw; */
+	/* text-align: center; */
+}
+
 .ReadMoreContainer {
 	display: flex;
 	justify-content: center;
@@ -42,7 +48,7 @@
 @media only screen and (max-width: 64rem) {
 	.Image {
 		float: right;
-		max-width: 50vw;
+		max-width: 40vw;
 		margin: 0 0 1rem 1.5rem;
 	}
 }

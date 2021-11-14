@@ -9,7 +9,7 @@
 	top: 0;
 	left: 0;
 
-	background-color: var(--header-color);
+	background-color: var(--primary-color);
 	color: var(--light-color);
 
 	backdrop-filter: blur(0.5rem);
@@ -38,6 +38,8 @@
 
 .HeadingIcon {
 	transition: padding var(--anim-length);
+	height: inherit;
+	width: auto;
 	padding: 0.25rem;
 }
 
@@ -62,6 +64,8 @@
 .Title,
 .Subtitle {
 	margin: 0;
+	font-family: var(--header-font);
+	font-weight: bold;
 	font-size: var(--h4);
 	padding-right: 1rem;
 }

@@ -24,6 +24,7 @@ import contactData from "../content/Contact.json";
 import "../assets/index.css";
 import { ContactForm } from "../components/sections/contact/ContactForm";
 import about from "./about";
+import { Reviews } from "../components/sections/testimonials/Reviews";
 
 interface IndexPageProps {}
 
@@ -36,6 +37,7 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 		<PageTemplate isHomepage={true} activePage="/">
 			<Hero {...heroData} linkTo="#services" />
 			<About {...aboutData} />
+			{/* <Reviews /> */}
 			<Services />
 			<Contact />
 		</PageTemplate>

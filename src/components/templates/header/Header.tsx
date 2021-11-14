@@ -93,8 +93,8 @@ const Header: React.FC<HeaderProps> = ({
 						</>
 					) : (
 						<>
-							<h3 className={`${css.Title}`}>{headerTitle}</h3>
-							<h4 className={`${css.Subtitle}`}>{headerSubtitle}</h4>
+							<span className={`${css.Title}`}>{headerTitle}</span>
+							<span className={`${css.Subtitle}`}>{headerSubtitle}</span>
 						</>
 					)}
 				</span>

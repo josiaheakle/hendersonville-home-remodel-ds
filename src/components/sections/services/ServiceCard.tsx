@@ -10,25 +10,31 @@ interface ServiceCardProps {
 	title: string;
 	description: string;
 	slug: string;
+	isOwnPage?: boolean;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
 	title,
 	description,
 	slug,
+	isOwnPage,
 }) => {
 	const getSummary = (): string => {
 		return `${splitAtSpace(description, 100)}...`;
 	};
 
 	return (
-		<div className={css.Service}>
-			<h3 className={css.ServiceTitle}>{title}</h3>
+		<article className={css.Service}>
+			{isOwnPage ? (
+				<h2 className={css.ServiceTitle}>{title}</h2>
+			) : (
+				<h3 className={css.ServiceTitle}>{title}</h3>
+			)}
 			<p className={css.ServiceDescription}>{getSummary()}</p>
 			<a href={`/services/${slug}`} className="link">
 				Read More
 			</a>
-		</div>
+		</article>
 	);
 };
 

@@ -143,6 +143,7 @@ small,
 
 .section {
 	width: 100vw;
+	max-width: 100vw;
 	min-height: calc(50vh - var(--header-height));
 	padding-top: var(--header-height);
 	display: flex;
@@ -159,6 +160,8 @@ small,
 
 .page {
 	width: 100vw;
+	max-width: 100vw;
+
 	min-height: calc(100vh - var(--header-height));
 	margin-top: var(--header-height);
 	display: flex;
@@ -173,8 +176,11 @@ small,
 
 @media only screen and (max-width: 64rem) {
 	html {
-		--h1: 2.5rem;
-		--h4: 1.25rem;
+		--h1: 2.25rem;
+		--h2: 2rem;
+		--h3: 1.8rem;
+		--h4: 1.4rem;
+		--h5: 1.1rem;
 	}
 
 	.container {

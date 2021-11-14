@@ -17,15 +17,20 @@ interface ServicesProps {
 
 const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 	servicesData as ServicesData;
-	return (
-		<section id="Services" className={`${css.Services} section`}>
+	const content = (
+		<>
 			<span className={`${css.Subtitle}`}>{servicesData.subtitle}</span>
-			<h2 className={`title ${css.Title}`}>{servicesData.title}</h2>
+			{isOwnPage ? (
+				<h1 className={`title ${css.Title}`}>{servicesData.title}</h1>
+			) : (
+				<h2 className={`title ${css.Title}`}>{servicesData.title}</h2>
+			)}
 			<div className={` ${css.ServicesContainer}`}>
 				{servicesData.services.map((service, index) => {
 					if (!isOwnPage && index > 2) return null;
 					return (
 						<ServiceCard
+							isOwnPage={isOwnPage}
 							slug={service.slug}
 							title={service.title}
 							description={service.summary}
@@ -38,6 +43,16 @@ const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 					<Button className={css.ReadMore}>See All</Button>
 				</a>
 			)}
+		</>
+	);
+
+	return isOwnPage ? (
+		<main id="Services" className={`section ${css.Services}`}>
+			{content}
+		</main>
+	) : (
+		<section id="Services" className={`section ${css.Services}`}>
+			{content}
 		</section>
 	);
 };
