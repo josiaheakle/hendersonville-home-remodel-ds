@@ -3,10 +3,30 @@
     "subtitle": "See What We Offer",
     "services" : [
         {
-            "title": "Home Remodeling",
-            "summary": "this is the summary text",
-            "additionalText": "this is additional text",
+            "title": "Bathroom Remodeling",
+            "summary": "Where is the first place you go in the morning? What about the last place you go before bed? Your bathroom is your safe space, let us transform your bathroom into a safe haven. With our knowledge of the latest materials and techniques, your bathroom will be perfect.",
+            "additionalText": "",
+            "slug": "bathroom-remodeling"
+        },{
+            "title": "Kitchen Remodeling",
+            "summary": "The kitchen is the central hub to your home, be sure it is comfortable and welcoming. Our knowledge of space utilization can transform a cluttered kitchen into an open comfortable space.",
+            "additionalText": "",
+            "slug": "kitchen-remodeling"
+        },{
+            "title": "Home Addition",
+            "summary": "Need more space? A new room is a big addition, make sure you choose the right team for the job. Our team of experts are deeply knowledgeable and experienced in home additions.",
+            "additionalText": "",
             "slug": "home-remodel"
+        },{
+            "title": "New Home Construction",
+            "summary": "Looking to build your dream home? A new construction is a massive undertaking, the right team decides whether this will be quick and painless or prolonged and miserable. This team will do everything you need with care and diligence.",
+            "additionalText": "",
+            "slug": "new-home-construction"
+        },{
+            "title": "Home Remodeling",
+            "summary": "Ready to transform your home into the dream you have always wanted? Our knowledge of leading edge techniques and materials will fulfill everything you could hope for and more.",
+            "additionalText": "",
+            "slug": "home-remodeling"
         }
     ]
 }
