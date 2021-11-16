@@ -18,17 +18,19 @@ const Service: React.FC<ServiceProps> = ({
 }) => {
 	return (
 		<main className="section">
-			<StaticImage
-				className={`${css.BgImage}`}
-				layout="fullWidth"
-				src="../../../assets/images/hero.jpg"
-				alt=""
-			/>
-			<a className={css.BackLink} href="/services">
-				<DownArrow className={css.BackArrow} />
-				All Services
-			</a>
+			<div className={`${css.BgContainer}`}>
+				<StaticImage
+					className={`${css.BgImage}`}
+					layout="fullWidth"
+					src="../../../assets/images/hero.jpg"
+					alt=""
+				/>
+			</div>
 			<div className={css.ServiceCard}>
+				<a className={css.BackLink} href="/services">
+					<DownArrow className={css.BackArrow} />
+					All Services
+				</a>
 				<h1 className={css.Title}>{title}</h1>
 				<p className={css.Summary}>{summary}</p>
 				<p className={css.AdditionalText}>{additionalText}</p>

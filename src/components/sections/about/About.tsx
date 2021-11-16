@@ -45,7 +45,7 @@ const About: React.FC<AboutProps> = ({
 	);
 
 	return isOwnPage ? (
-		<main id="About" className={`section ${css.About}`}>
+		<main id="About" className={`${css.About}`}>
 			{content}
 		</main>
 	) : (

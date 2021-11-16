@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import contactData from "../../../content/Contact.json";
-import { ContactData } from "../../../types/content_types/Contact";
+import contactData from "../../../../content/Contact.json";
+import { ContactData } from "../../../../types/content_types/Contact";
 
-import PhoneIcon from "../../../assets/images/icons/phone-call.svg";
-import HomeIcon from "../../../assets/images/icons/homepage.svg";
+import PhoneIcon from "../../../../assets/images/icons/phone-call.svg";
+import HomeIcon from "../../../../assets/images/icons/homepage.svg";
 
 import * as css from "./ContactInfo.module.css";
 

@@ -47,7 +47,7 @@ const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 	);
 
 	return isOwnPage ? (
-		<main id="Services" className={`section ${css.Services}`}>
+		<main id="Services" className={`${css.Services}`}>
 			{content}
 		</main>
 	) : (

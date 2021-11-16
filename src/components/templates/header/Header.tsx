@@ -18,7 +18,7 @@ import BrandIcon from "../../../assets/images/icon.png";
 import * as css from "./Header.module.css";
 import { MobileNavbar } from "./navbar/MobileNavbar";
 import { Navbar } from "./navbar/Navbar";
-import { ContactInfo } from "../../sections/contact/ContactInfo";
+import { ContactInfo } from "../../sections/contact/info/ContactInfo";
 
 // props
 
@@ -75,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({
 	return (
 		<header
 			className={`${css.Header} ${className || ""} ${
-				!isShrunk && !isMobile && isHomepage ? css.large : css.small
+				!isShrunk && !isMobile ? css.large : css.small
 			} ${isMobileHidden && isMobile && !isMobileOpen ? css.MobileHidden : ""}`}
 			{...props}
 		>
@@ -107,15 +107,8 @@ const Header: React.FC<HeaderProps> = ({
 					links={headerLinks}
 				/>
 			) : (
-				<div
-					className={`${css.NavContainer} ${
-						isShrunk || !isHomepage ? css.hidden : ""
-					}`}
-				>
-					<ContactInfo
-						className="small-text"
-						hidden={isShrunk || !isHomepage}
-					/>
+				<div className={`${css.NavContainer} ${isShrunk ? css.hidden : ""}`}>
+					<ContactInfo className="small-text" hidden={isShrunk} />
 					<Navbar
 						activePage={activePage}
 						isHomepage={isHomepage}

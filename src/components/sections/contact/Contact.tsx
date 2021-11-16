@@ -1,15 +1,16 @@
 import * as React from "react";
-import { ContactInfo } from "./ContactInfo";
+import { ContactInfo } from "./info/ContactInfo";
 import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 
 import contactData from "../../../content/Contact.json";
 
 import * as css from "./Contact.module.css";
 
-import { ContactForm } from "./ContactForm";
+import { ContactForm } from "./forms/ContactForm";
 import { ContactData } from "../../../types/content_types/Contact";
 import { StaticImage } from "gatsby-plugin-image";
 import { useInView } from "react-intersection-observer";
+import { LeadBuyerForm } from "./forms/LeadBuyerForm";
 
 interface ContactProps {
 	isOwnPage?: boolean;
@@ -39,11 +40,7 @@ const Contact: React.FC<ContactProps> = ({ isOwnPage }) => {
 				<h2 className={`${css.Title} title`}>Contact Us</h2>
 				<ContactInfo className={css.ContactInfo} />
 			</div>
-			<div className={`${css.ContactBanner}`}>
-				<CallNowButton />
-				<span className={`${css.Seperator}`}> - or - </span>
-				<ContactForm />
-			</div>
+			<LeadBuyerForm className={`${css.ContactBanner}`} />
 		</>
 	);
 
@@ -52,7 +49,7 @@ const Contact: React.FC<ContactProps> = ({ isOwnPage }) => {
 			{content}
 		</main>
 	) : (
-		<section ref={ref} id="Contact" className={`${css.Contact}`}>
+		<section ref={ref} id="Contact" className={`${css.Contact} section `}>
 			{content}
 		</section>
 	);

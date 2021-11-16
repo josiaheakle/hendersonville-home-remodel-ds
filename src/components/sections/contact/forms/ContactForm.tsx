@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Button } from "../../ui/buttons/Button";
-import { TextAreaInput } from "../../ui/input/TextAreaInput";
-import { TextInput } from "../../ui/input/TextInput";
+import { Button } from "../../../ui/buttons/Button";
+import { TextAreaInput } from "../../../ui/input/TextAreaInput";
+import { TextInput } from "../../../ui/input/TextInput";
 
-import * as css from "./Contact.module.css";
+import * as css from "../Contact.module.css";
 
 interface ContactFormProps extends React.HTMLProps<HTMLFormElement> {}
 

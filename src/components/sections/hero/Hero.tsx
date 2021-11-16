@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { LearnMoreButton } from "../../ui/buttons/LearnMoreButton.tsx/LearnMoreButton";
+import { LearnMoreButton } from "../../ui/buttons/LearnMoreButton/LearnMoreButton";
 import { StaticImage } from "gatsby-plugin-image";
 import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 

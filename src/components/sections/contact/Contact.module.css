@@ -1,14 +1,16 @@
 .Contact {
-	width: 100vw;
-	min-height: 50vh;
-	padding-top: 25vh;
-	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .Heading {
-	margin-left: 20vw;
+	/* margin-left: 20vw; */
 	/* margin-bottom: 1rem; */
 	padding: 1rem;
+	margin-bottom: 2rem;
 	max-width: fit-content;
 	color: var(--light-color);
 	backdrop-filter: blur(0.5rem);
@@ -53,16 +55,15 @@
 }
 
 .ContactBanner {
-	width: 80vw;
-	padding: 0 10vw 0 10vw;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-evenly;
-	background-color: var(--highlight-color);
-	position: absolute;
-	bottom: 8rem;
-	height: 6rem;
+	/* width: 80vw; */
+	/* padding: 0 10vw 0 10vw; */
+	/* display: flex; */
+	/* flex-direction: row; */
+	/* align-items: center; */
+	/* justify-content: space-evenly; */
+	/* position: absolute; */
+	/* bottom: 8rem; */
+	/* height: 6rem; */
 }
 
 .Seperator {
@@ -71,11 +72,8 @@
 }
 
 .Contact .Form {
-	position: relative;
 	background-color: var(--transparent-color);
 	backdrop-filter: blur(0.5rem);
-
-	top: -10rem;
 }
 
 .Form {
@@ -119,7 +117,6 @@
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin-bottom: 5rem;
 		padding-top: 2rem;
 	}
 
@@ -147,15 +144,6 @@
 	.Seperator {
 		color: var(--light-color);
 		padding: 1rem;
-	}
-
-	.Contact .Form {
-		background-color: transparent;
-		color: var(--light-color);
-		position: initial;
-		top: 0;
-		bottom: 0;
-		padding: 0;
 	}
 
 	.FormHeader {
