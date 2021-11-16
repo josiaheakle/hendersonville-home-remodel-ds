@@ -114,6 +114,11 @@ small,
 	color: var(--contrast-color);
 }
 
+.not-found {
+	text-align: center;
+	margin-top: 2rem;
+}
+
 .section {
 	width: 100vw;
 	max-width: 100vw;

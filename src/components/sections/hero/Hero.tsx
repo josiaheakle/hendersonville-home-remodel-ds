@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ image, subtitle, title }) => {
 				</div>
 				<div className={`${css.Content}`}>
 					<span className={`${css.Subtitle}`}>{subtitle}</span>
-					<h2 className={`${css.Title}`}>{title}</h2>
+					<h1 className={`${css.Title}`}>{title}</h1>
 					<CallNowButton />
 				</div>
 				{/* {!isMobile ? <ContactForm className={`${css.ContactForm}`} /> : null} */}

@@ -86,17 +86,8 @@ const Header: React.FC<HeaderProps> = ({
 					alt={headerIcon.alt}
 				></img>
 				<span className={`${css.TitleContainer}`}>
-					{isHomepage ? (
-						<>
-							<h1 className={`${css.Title}`}>{headerTitle}</h1>
-							<h2 className={`${css.Subtitle}`}>{headerSubtitle}</h2>
-						</>
-					) : (
-						<>
-							<span className={`${css.Title}`}>{headerTitle}</span>
-							<span className={`${css.Subtitle}`}>{headerSubtitle}</span>
-						</>
-					)}
+					<span className={`${css.Title}`}>{headerTitle}</span>
+					<span className={`${css.Subtitle}`}>{headerSubtitle}</span>
 				</span>
 			</a>
 			{isMobile ? (
