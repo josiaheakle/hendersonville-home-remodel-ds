@@ -22,7 +22,7 @@ const LeadBuyerForm: React.FC<LeadBuyerFormProps> = ({
 	className,
 	...props
 }) => {
-	const apiUrl = `https://leads.leadbuyerclub.com/?api_key=${process.env.LEAD_BUYER_KEY}&affiliate_source=${process.env.LEAD_BUYER_AFFILIATE_SOURCE}&funnel=5&category=0&buttons=btn-success&step=1&save=1`;
+	const apiUrl = `https://leads.leadbuyerclub.com/?api_key=${process.env.GATSBY_LEAD_BUYER_KEY}&affiliate_source=${process.env.GATSBY_LEAD_BUYER_AFFILIATE_SOURCE}&funnel=5&category=0&buttons=btn-success&step=1&save=1`;
 
 	return (
 		<form
