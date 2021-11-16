@@ -21,6 +21,10 @@ const SEOTemplate: React.FC<SEOTemplateProps> = ({ siteData }) => {
 			<meta property="og:url" content={siteData.url} />
 			<meta property="og:description" content={siteData.description} />
 			<meta property="og:image" content={siteData.image.src} />
+			<meta
+				name="google-site-verification"
+				content="2wyxJDrtQ9WjQILVjTmbtno06i8F1pd0EVl0jWcIu_c"
+			/>
 		</Helmet>
 	);
 };
