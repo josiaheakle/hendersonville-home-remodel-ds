@@ -16,6 +16,7 @@ const Sitemap: React.FC<SitemapProps> = ({ className, ...props }) => {
 			<ul className={`${css.List}`}>
 				{siteData.pages.map((page, i) => (
 					<SitemapLink
+						key={i}
 						className={css.Link}
 						title={page.title}
 						href={page.page}

@@ -8,7 +8,7 @@
 
 .ServicesContainer {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 
@@ -28,7 +28,9 @@
 
 .Service {
 	background-color: var(--primary-color);
-	width: 14rem;
+	width: 60vw;
+	height: fit-content;
+	text-align: left;
 	/* border-radius: 1rem; */
 	border-radius: var(--border-radius);
 
@@ -39,8 +41,15 @@
 	color: var(--dark-color);
 
 	padding: 1rem;
-	margin: 2rem 1rem 2rem 1rem;
+	margin: 2rem 1rem;
+	/* margin: 2rem 20vw 2rem 1rem; */
 }
+
+/* .Service.rightAlign {
+	margin: 2rem 1rem 2rem 20vw;
+
+	text-align: right;
+} */
 
 .ServiceTitle {
 	color: var(--light-color);

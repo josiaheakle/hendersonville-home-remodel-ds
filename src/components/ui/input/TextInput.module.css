@@ -41,7 +41,7 @@
 	width: 10rem;
 	/* border-radius: 0.75rem; */
 	border-radius: calc(var(--border-radius) * 0.75);
-
+	font-family: var(--body-font);
 	height: 28px;
 	padding-left: 1rem;
 	padding-right: 1rem;

@@ -4,29 +4,59 @@
     "services" : [
         {
             "title": "Bathroom Remodeling",
-            "summary": "Where is the first place you go in the morning? What about the last place you go before bed? Your bathroom is your safe space, let us transform your bathroom into a safe haven. With our knowledge of the latest materials and techniques, your bathroom will be perfect.",
-            "additionalText": "",
-            "slug": "bathroom-remodeling"
+            "altTitles": ["Bathroom Renovation"],
+            "summary": [
+                "Where is the first place you go in the morning? What about the last place you go before bed? Your bathroom is your safe space, let us transform your bathroom into a safe haven. With our knowledge of the latest materials and techniques, your bathroom will be the perfect place to start and end each and every day..",
+                "Your tub and toilet are important steps to updating your bathroom. Maybe you’re looking for a cast iron tub, or porcelain tile for your bathtub? You may need a dual flush toilet, a bidet or a rounded bowl for a smaller space. ", 
+                "Next is your flooring. Our knowledge of the best flooring types for bathrooms will be crucial for your new bathroom. Your new floors could be porcelain or ceramic tile, maybe you want vinyl flooring but cannot decide on sheet, plank, tile, natural stone, engineered wood or laminate flooring.",
+                "Finally we finish with your countertops and cabinets. Our experience with the best countertop materials, such as laminate, ceramic/porcelain tile, solid-surface, natural stone, concrete, crushed glass, or quartz is sure to bring you exactly what you need."
+            ],
+            "additionalText": [""],
+            "slugs": ["bathroom-remodeling", "bathroom-renovation"],
+            "image": {
+                "src": "bathroom.jpg",
+                "alt": "Beautiful white bathroom. Bathroom renovation Hendersonville Home Remodel.",
+                "title": "Beautiful white bathroom."
+            }
         },{
             "title": "Kitchen Remodeling",
-            "summary": "The kitchen is the central hub to your home, be sure it is comfortable and welcoming. Our knowledge of space utilization can transform a cluttered kitchen into an open comfortable space.",
-            "additionalText": "",
-            "slug": "kitchen-remodeling"
+            "summary": [
+                "The kitchen is the central hub to your home, be sure it is comfortable and welcoming. Our knowledge of space utilization can transform a cluttered kitchen into an open and comfortable space.",
+                "Cabinets are the first thing anyone sees when they walk into your kitchen, we make sure to make it count. We have worked with just about all materials: melamine, polyester, solid wood, wood veneers, medium-density fiberboard, high gloss thermofoil, high pressure laminate and whatever else you could think of.", 
+                "The countertops are equally as important. Just like cabinets, we have probably worked with any material you could think of. A few examples would be granite, soapstone, marble, quartz (engineered stone), solid-surface material, ceramic tile, laminates, wood or butcher block, stainless steel, and concrete.", 
+                "Another vital aspect to your new kitchen is the sink. We are excited to help you find what you need. Whether that be a top-mount, undermount, single, double, or even triple basin! Additionally we are experienced with apron sinks, farmhouse sinks, and drainboard sinks. ",
+                "Last is your floor. Are you looking for hardwood? Maybe bamboo or ceramic tile? Concrete or natural stone tile? You may want durable linoleum or vinyl. Whatever your needs, we will transform your kitchen into a perfect space for get togethers and home diners. "
+            ],
+            "additionalText": [""],
+            "slugs": ["kitchen-remodeling"]
         },{
-            "title": "Home Addition",
-            "summary": "Need more space? A new room is a big addition, make sure you choose the right team for the job. Our team of experts are deeply knowledgeable and experienced in home additions.",
-            "additionalText": "",
-            "slug": "home-remodel"
+            "title": "Room Addition",
+            "summary": [
+                "Need more space? A new room can be a big undertaking, make sure you choose the right team for the job. Our team of experts are deeply knowledgeable and experienced in home additions. "
+            ],
+            "additionalText": [""],
+            "slugs": ["room-addition"]
         },{
             "title": "New Home Construction",
-            "summary": "Looking to build your dream home? A new construction is a massive undertaking, the right team decides whether this will be quick and painless or prolonged and miserable. This team will do everything you need with care and diligence.",
-            "additionalText": "",
-            "slug": "new-home-construction"
+            "summary": [
+                "Looking to build your dream home? A new construction is a massive undertaking, the right team decides whether this will be quick and painless or prolonged and miserable. This team will do everything you need with care and diligence.",
+                "Starting with flooring, what type are you looking for? Are you looking for carpet? Does it need to be waterproof or stain-resistant? Do you need a design or a solid color? Maybe you want hardwood with area rugs? Whatever your needs we can find the perfect fit.",
+                "From there we can design each room according to its needs. Maybe you want wallpaper, or a wet bar installed. You may need a mud room or dual ovens, whatever your needs, we are excited to create your new home. "
+            ],
+            "additionalText": [""],
+            "slugs": ["new-home-construction"]
         },{
-            "title": "Home Remodeling",
-            "summary": "Ready to transform your home into the dream you have always wanted? Our knowledge of leading edge techniques and materials will fulfill everything you could hope for and more.",
-            "additionalText": "",
-            "slug": "home-remodeling"
+            "title": "Basement and Garage Renovation",
+            "summary": ["Basements and garages are notorious for having issues with water leaks and damage. We have seen it all and know the perfect solution for you. From mold removal, garage and basement waterproofing, and finishing basements from floor to ceiling, we can accomplish what you need."],
+            "additionalText": [""],
+            "slugs": ["home-remodeling"]
+        },{
+            "title": "Roofing and Siding",
+            "summary": [
+                "About time to replace your roofing? We got you covered. Our experience spans years working with different roofing and materials, from asphalt roll, built-up roofing, composite asphalt shingles, wood shingles, and even metal roofing. ",
+                "What about your siding? Looking for the longest lasting material? We have worked with each one and know what you are looking for. Wood, fiber cement, aluminum, and vinyl are just a few of the many we have extensive experience with. "],
+            "additionalText": [""],
+            "slugs": ["roofing and siding"]
         }
     ]
 }

@@ -10,8 +10,8 @@ interface AboutProps {
 	isOwnPage?: boolean;
 	title: string;
 	subtitle?: string;
-	summary: string;
-	additionalText: string;
+	summary: [string];
+	additionalText: [string];
 }
 
 const About: React.FC<AboutProps> = ({
@@ -31,9 +31,18 @@ const About: React.FC<AboutProps> = ({
 				alt="placeholder"
 				className={`${css.Image}`}
 			/>
-			<p>{summary}</p>
+			{summary.map((para, i) => (
+				<p className={`${css.Paragraph}`} key={i}>
+					{para}
+				</p>
+			))}
+
 			{isOwnPage ? (
-				<p>{additionalText}</p>
+				additionalText.map((para, i) => (
+					<p className={`${css.Paragraph}`} key={i}>
+						{para}
+					</p>
+				))
 			) : (
 				<div className={`${css.ReadMoreContainer}`}>
 					<ReadMoreLink title="About Page" href="/about">

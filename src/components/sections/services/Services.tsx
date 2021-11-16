@@ -1,13 +1,11 @@
 import * as React from "react";
 
-import servicesData from "../../../content/Services.json";
-import {
-	Service as ServiceType,
-	ServicesData,
-} from "../../../types/content_types/Services";
 import { Button } from "../../ui/buttons/Button";
 import { ReadMoreLink } from "../../ui/links/ReadMoreLink";
 import { ServiceCard } from "./ServiceCard";
+
+import { ServicesData } from "../../../types/content_types/Services";
+import servicesData from "../../../content/Services.json";
 
 import * as css from "./Services.module.css";
 
@@ -28,12 +26,17 @@ const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 			<div className={` ${css.ServicesContainer}`}>
 				{servicesData.services.map((service, index) => {
 					if (!isOwnPage && index > 2) return null;
+					console.log({ service, index });
 					return (
 						<ServiceCard
+							className={`${index % 2 === 0 ? "" : css.rightAlign}`}
+							key={index}
 							isOwnPage={isOwnPage}
-							slug={service.slug}
+							slug={service.slugs ? service.slugs[0] : ""}
 							title={service.title}
-							description={service.summary}
+							summary={service.summary}
+							image={service.image}
+							src={service.image?.src || ""}
 						/>
 					);
 				})}
