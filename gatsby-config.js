@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "template-site",
+    siteUrl: "https://www.hendersonvillehomeremodel.com",
+    title: "Hendersonville Home Remodel",
   },
   plugins: [
     "gatsby-plugin-image",
