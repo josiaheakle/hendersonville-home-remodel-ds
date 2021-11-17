@@ -10,8 +10,8 @@ interface AboutProps {
 	isOwnPage?: boolean;
 	title: string;
 	subtitle?: string;
-	summary: [string];
-	additionalText: [string];
+	summary: string[];
+	additionalText: string[];
 }
 
 const About: React.FC<AboutProps> = ({
@@ -24,7 +24,11 @@ const About: React.FC<AboutProps> = ({
 	const content = (
 		<div className={`${css.AboutContent}`}>
 			{subtitle ? <span className={`${css.Subtitle}`}>{subtitle}</span> : null}
-			<h2 className={`${css.Title}`}>{title}</h2>
+			{isOwnPage ? (
+				<h1 className={`${css.Title}`}>{title}</h1>
+			) : (
+				<h2 className={`${css.Title}`}>{title}</h2>
+			)}
 			<StaticImage
 				layout="constrained"
 				src="../../../assets/images/about.jpg"

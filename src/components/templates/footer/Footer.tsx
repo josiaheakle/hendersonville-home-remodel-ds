@@ -14,13 +14,27 @@ const Footer: React.FC<FooterProps> = ({ className, siteData, ...props }) => {
 		<footer {...props} className={`${className || ""} ${css.Footer}`}>
 			<Sitemap className={`${css.Sitemap}`} />
 			<CallNowButton className={`${css.CallButton}`} />
+			<span id="brand-copyright">
+				© 2021 {siteData.title}.
+				<br />
+				<span className={`${css.PrivatePolicy}`}>
+					<a className={`link ${css.left}`} href="/terms-of-service">
+						Terms of Services
+					</a>
+					/
+					<a className={`link ${css.right}`} href="/private-policy">
+						Private Policy
+					</a>
+					.
+				</span>
+			</span>
 			<span id="created-by" className={css.CreatedBy}>
 				Website created by{" "}
 				<a className="link" href="https://www.josiaheakle.com">
 					Josiah Eakle
 				</a>
+				.
 			</span>
-			<span id="brand-copyright">© 2021 {siteData.title}.</span>
 		</footer>
 	);
 };

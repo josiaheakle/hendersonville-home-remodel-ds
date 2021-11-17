@@ -3,6 +3,7 @@ import * as React from "react";
 
 // types
 import HeaderLinkType from "../../../../types/prop_types/HeaderLinkType";
+import { ContactInfo } from "../../../sections/contact/info/ContactInfo";
 import { Button } from "../../../ui/buttons/Button";
 import { CallNowButton } from "../../../ui/buttons/CallNowButton/CallNowButton";
 

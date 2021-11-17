@@ -1,8 +1,8 @@
 import { Image } from "./reusable/Image";
 
-export interface AboutData {
+export interface TextSection {
 	title: string;
 	subtitle: string;
-	summary: [string];
-	additionalText: [string];
+	summary: string[];
+	additionalText: string[];
 }

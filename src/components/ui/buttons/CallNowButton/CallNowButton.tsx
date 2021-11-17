@@ -16,10 +16,10 @@ const CallNowButton: React.FC<CallNowButtonProps> = ({
 	return (
 		<a
 			{...props}
-			className={`${className || ""}`}
-			href="//leads.leadbuyerclub.com/?api_key=52809ea5a1b5b0f05d35ae4db05ea8dae30408d7&affiliate_source=josiaheakle1&category=0&funnel=3&buttons=btn-success&step=1"
+			className={`${css.Button} ${className || ""}`}
+			href={`tel:${contactData.phoneNumber}`}
 		>
-			<Button className={css.Button}>Get your Free Estimate</Button>
+			<Button className={css.Button}>Call Now</Button>
 		</a>
 	);
 };

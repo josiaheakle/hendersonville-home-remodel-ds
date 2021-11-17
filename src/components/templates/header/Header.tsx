@@ -19,6 +19,7 @@ import * as css from "./Header.module.css";
 import { MobileNavbar } from "./navbar/MobileNavbar";
 import { Navbar } from "./navbar/Navbar";
 import { ContactInfo } from "../../sections/contact/info/ContactInfo";
+import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 
 // props
 
@@ -60,7 +61,7 @@ const Header: React.FC<HeaderProps> = ({
 	};
 
 	const checkScrollDirection = () => {
-		if (scrollDirection === "down") {
+		if (scrollDirection === "down" && !isMobileOpen) {
 			setIsMobileHidden(true);
 		} else setIsMobileHidden(false);
 	};
@@ -90,6 +91,7 @@ const Header: React.FC<HeaderProps> = ({
 					<span className={`${css.Subtitle}`}>{headerSubtitle}</span>
 				</span>
 			</a>
+			{isShrunk && !isMobile ? <CallNowButton /> : null}
 			{isMobile ? (
 				<MobileNavbar
 					setMobileOpen={(bool) => setIsMobileOpen(bool)}

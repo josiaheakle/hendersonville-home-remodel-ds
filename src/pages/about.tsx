@@ -5,12 +5,12 @@ import { PageTemplate } from "../components/templates/PageTemplate";
 
 import aboutData from "../content/About.json";
 
-import { AboutData } from "../types/content_types/About";
+import { TextSection } from "../types/content_types/TextSection";
 
 interface aboutProps {}
 
 const about: React.FC<aboutProps> = ({}) => {
-	aboutData as AboutData;
+	aboutData as TextSection;
 	return (
 		<PageTemplate isHomepage={false} activePage="/about">
 			<About isOwnPage={true} {...aboutData} />

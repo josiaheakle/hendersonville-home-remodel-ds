@@ -15,11 +15,12 @@ import contactData from "../content/Contact.json";
 
 // types
 import { HeroData as HeroDataType } from "../types/content_types/Hero";
-import { AboutData as AboutDataType } from "../types/content_types/About";
+import { TextSection as AboutDataType } from "../types/content_types/TextSection";
 import { ContactData as ContactDataType } from "../types/content_types/Contact";
 
 // css
 import "../assets/index.css";
+import { CallNowButton } from "../components/ui/buttons/CallNowButton/CallNowButton";
 
 interface IndexPageProps {}
 

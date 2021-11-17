@@ -7,8 +7,8 @@ import { DownArrow } from "../../ui/svg-icons/DownArrow";
 
 interface ServiceProps {
 	title: string;
-	summary: string;
-	additionalText: string;
+	summary: string[];
+	additionalText: string[];
 }
 
 const Service: React.FC<ServiceProps> = ({
@@ -32,8 +32,16 @@ const Service: React.FC<ServiceProps> = ({
 					All Services
 				</a>
 				<h1 className={css.Title}>{title}</h1>
-				<p className={css.Summary}>{summary}</p>
-				<p className={css.AdditionalText}>{additionalText}</p>
+				{summary.map((str, i) => (
+					<p key={i} className={css.Summary}>
+						{str}
+					</p>
+				))}
+				{additionalText.map((str, i) => (
+					<p key={i} className={css.AdditionalText}>
+						{str}
+					</p>
+				))}
 			</div>
 		</main>
 	);

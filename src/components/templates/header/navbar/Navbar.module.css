@@ -117,3 +117,8 @@
 .ActiveLink {
 	color: var(--contrast-color);
 }
+
+.ContactInfoContainer {
+	position: absolute;
+	bottom: 2rem;
+}

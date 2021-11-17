@@ -13,7 +13,7 @@ interface PageTemplateProps extends React.HTMLProps<HTMLDivElement> {
 }
 
 /**
- * HANDLES SEO, HEADER AND FOOTER
+ * Handles meta data, header and footer
  */
 
 const PageTemplate: React.FC<PageTemplateProps> = ({

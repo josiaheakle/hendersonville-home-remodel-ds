@@ -98,3 +98,9 @@
 	text-decoration: none;
 	color: inherit;
 }
+
+@media only screen and (max-width: 64rem) {
+	.HeadingContainer {
+		padding-right: 0;
+	}
+}

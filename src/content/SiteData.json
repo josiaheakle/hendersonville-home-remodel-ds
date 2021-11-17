@@ -1,15 +1,15 @@
 {
     "url": "https://www.hendersonvillehomeremodel.com",
     "title": "Hendersonville Home Remodel",
-    "subtitle": "#1 Home Remodel Service in Hendersonville TN",
-    "description": "The best and most affordable home remodelling service in Hendersonville, TN. We offer kitchen, bathroom, basement and garage renovation, as well as roofing and siding replacment and much more!",
+    "subtitle": "Home Renovation Solutions from Flooring to Roofing",
+    "description": "The best and most affordable home remodeling service in Hendersonville, TN. We offer kitchen, bathroom, basement and garage renovation, as well as roofing and siding replacment and much more!",
     "image": {
-        "src": "",
-        "alt": ""
+        "src": "/public/icons/icon-512x512.png",
+        "alt": "Hendersonville Home Remodel Logo"
     },
     "icon": {
         "src": "",
-        "alt": "Brand Logo"
+        "alt": "Hendersonville Home Remodel - renovation solutions from flooring to roofing"
     },
     "pages": [
         {
