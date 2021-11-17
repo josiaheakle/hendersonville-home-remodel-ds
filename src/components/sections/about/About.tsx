@@ -32,7 +32,7 @@ const About: React.FC<AboutProps> = ({
 			<StaticImage
 				layout="constrained"
 				src="../../../assets/images/about.jpg"
-				alt="placeholder"
+				alt="Kitchen renovation; Hendersonville Home remodel"
 				className={`${css.Image}`}
 			/>
 			{summary.map((para, i) => (

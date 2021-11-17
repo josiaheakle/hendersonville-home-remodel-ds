@@ -2,8 +2,11 @@ import * as React from "react";
 
 import { PageTemplate } from "../components/templates/PageTemplate";
 
+import attrData from "../content/Attributions.json";
 import siteData from "../content/SiteData.json";
+
 import { SiteData } from "../types/content_types/SiteData";
+import { Attributions as AttrData } from "../types/content_types/Attributions";
 
 interface PrivatePolicyPageProps {}
 
@@ -53,6 +56,19 @@ const PrivatePolicyPage: React.FC<PrivatePolicyPageProps> = ({}) => {
 					with any work that is performed by any services provided by a Service
 					Professional from one of our lead generation websites, you must
 					address such dispute with the Service Professional directly.
+				</p>
+				<p>
+					Photos provided by{" "}
+					{attrData.attributions[0].authors.map(
+						(a, i) =>
+							`${a}${
+								i === attrData.attributions[0].authors.length - 2 ? " and " : ""
+							}${i >= attrData.attributions[0].authors.length - 2 ? "" : ", "}`
+					)}{" "}
+					at{" "}
+					<a href={attrData.attributions[0].link}>
+						{attrData.attributions[0].title}
+					</a>
 				</p>
 			</div>
 		</PageTemplate>

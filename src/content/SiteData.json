@@ -28,6 +28,11 @@
             "linkElemId" : "Services" 
         },
         {
+            "title": "Location",
+            "page": "/location",
+            "linkElemId": "Location"
+        },
+        {
             "title": "Contact",
             "page": "/contact",
             "linkElemId" : "Contact" 
