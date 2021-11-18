@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({
 					<span className={`${css.Subtitle}`}>{headerSubtitle}</span>
 				</span>
 			</a>
-			{isShrunk && !isMobile ? <CallNowButton /> : null}
+			{/* {isShrunk && !isMobile ? <CallNowButton /> : null} */}
 			{isMobile ? (
 				<MobileNavbar
 					setMobileOpen={(bool) => setIsMobileOpen(bool)}

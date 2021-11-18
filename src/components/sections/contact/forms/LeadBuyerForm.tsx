@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Button } from "../../../ui/buttons/Button";
+import { CallNowButton } from "../../../ui/buttons/CallNowButton/CallNowButton";
 
 // comps
 import { TextAreaInput } from "../../../ui/input/TextAreaInput";
@@ -31,6 +32,8 @@ const LeadBuyerForm: React.FC<LeadBuyerFormProps> = ({
 			method="POST"
 			{...props}
 		>
+			<CallNowButton />
+			<span className={`${css.Seperator}`}>- or -</span>
 			<TextInput name="zip" type="text" label="Zip" />
 			<TextInput name="full_name" type="text" label="Full Name" />
 			<TextInput name="phone" type="text" label="Phone" />

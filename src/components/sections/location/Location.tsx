@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import { useIsMobile } from "../../../hooks/ReactiveHooks";
 import { Location as LocationType } from "../../../types/content_types/Location";
 import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 import { ReadMoreLink } from "../../ui/links/ReadMoreLink";
@@ -20,21 +21,35 @@ const Location: React.FC<LocationProps> = ({
 	state,
 	additionalText,
 }) => {
+	const isMobile = useIsMobile();
 	const content = (
 		<div className={`${css.Content}`}>
-			{subtitle ? <span className={`${css.Subtitle}`}>{subtitle}</span> : null}
-			{isOwnPage ? (
-				<h1 className={`${css.Title}`}>{title}</h1>
-			) : (
-				<h2 className={`${css.Title}`}>{title}</h2>
-			)}
-			<StaticImage
-				layout="constrained"
-				src="../../../assets/images/location.jpg"
-				alt="Sunset in Hendersonville, TN"
-				className={`${css.Image}`}
-			/>
-			<ContactInfo className={`${css.ContactInfo}`} />
+			<div>
+				{isMobile ? null : (
+					<StaticImage
+						layout="constrained"
+						src="../../../assets/images/location.jpg"
+						alt="Sunset in Hendersonville, TN"
+						className={`${css.Image}`}
+					/>
+				)}
+				{subtitle ? (
+					<span className={`${css.Subtitle}`}>{subtitle}</span>
+				) : null}
+				{isOwnPage ? (
+					<h1 className={`${css.Title}`}>{title}</h1>
+				) : (
+					<h2 className={`${css.Title}`}>{title}</h2>
+				)}
+			</div>
+			{isMobile ? (
+				<StaticImage
+					layout="constrained"
+					src="../../../assets/images/location.jpg"
+					alt="Sunset in Hendersonville, TN"
+					className={`${css.Image}`}
+				/>
+			) : null}
 			{summary.map((para, i) => (
 				<p className={`${css.Paragraph}`} key={i}>
 					{para}

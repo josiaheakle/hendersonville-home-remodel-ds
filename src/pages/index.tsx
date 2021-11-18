@@ -8,7 +8,7 @@ import { Services } from "../components/sections/services/Services";
 import { About } from "../components/sections/about/About";
 import { Contact } from "../components/sections/contact/Contact";
 import { Location } from "../components/sections/location/Location";
-// import { CallNowButton } from "../components/ui/buttons/CallNowButton/CallNowButton";
+import { CallNowButton } from "../components/ui/buttons/CallNowButton/CallNowButton";
 
 // content
 import heroData from "../content/Hero.json";
@@ -24,7 +24,7 @@ import { Location as LocationDataType } from "../types/content_types/Location";
 
 // css
 import "../assets/index.css";
-import { CallNowButton } from "../components/ui/buttons/CallNowButton/CallNowButton";
+import * as css from "../assets/Page.module.css";
 
 interface IndexPageProps {}
 
@@ -37,9 +37,11 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 		<PageTemplate isHomepage={true} activePage="/">
 			<Hero {...heroData} linkTo="#services" />
 			<About {...aboutData} />
-			<div className={`align-row`}>
-				Ready to get started?
-				<CallNowButton />
+			<div className={`${css.CallNowBanner}`}>
+				<span>
+					Looking for a free quote?
+					<CallNowButton />
+				</span>
 			</div>
 			<Services />
 			<Location {...locationData} />

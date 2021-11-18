@@ -49,7 +49,29 @@
 	justify-content: center;
 }
 
+.IconContainer {
+	display: flex;
+	padding: 2rem 15vw;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.IconContainer img {
+	height: 4rem;
+	width: auto;
+	transition: transform var(--anim-length);
+}
+
+.IconContainer a:hover > img,
+.IconContainer a:focus-visible > img {
+	transform: scale(1.2);
+}
+
 @media only screen and (max-width: 64rem) {
+	.IconContainer {
+		padding: 2rem 0;
+	}
+
 	.Image {
 		float: right;
 		max-width: 40vw;

@@ -38,7 +38,8 @@
 }
 
 .Input {
-	width: 10rem;
+	/* width: 10rem; */
+	max-width: 12rem;
 	/* border-radius: 0.75rem; */
 	border-radius: calc(var(--border-radius) * 0.75);
 	font-family: var(--body-font);

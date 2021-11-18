@@ -1,0 +1,21 @@
+.CallNowBanner {
+	width: 100vw;
+	padding: 1rem 0;
+	color: var(--light-color);
+	font-size: var(--h5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary-color);
+	/* box-shadow: 0.5rem 0.5rem var(--highlight-color); */
+}
+
+@media only screen and (max-width: 64rem) {
+	/* .CallNowBanner span {
+		width: min-content;
+		display: flex;
+		text-align: end;
+		flex-direction: row;
+		align-items: center;
+	} */
+}

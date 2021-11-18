@@ -1,8 +1,10 @@
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import { useIsMobile } from "../../../hooks/ReactiveHooks";
-import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
+
 import { ReadMoreLink } from "../../ui/links/ReadMoreLink";
+
+import BathroomIcon from "../../../assets/images/icons/toilet.svg";
+import KitchenIcon from "../../../assets/images/icons/food-restaurant.svg";
+import HomeIcon from "../../../assets/images/icons/homepage.svg";
 
 import * as css from "./About.module.css";
 
@@ -29,18 +31,17 @@ const About: React.FC<AboutProps> = ({
 			) : (
 				<h2 className={`${css.Title}`}>{title}</h2>
 			)}
-			<StaticImage
+			{/* <StaticImage
 				layout="constrained"
 				src="../../../assets/images/about.jpg"
 				alt="Kitchen renovation; Hendersonville Home remodel"
 				className={`${css.Image}`}
-			/>
+			/> */}
 			{summary.map((para, i) => (
 				<p className={`${css.Paragraph}`} key={i}>
 					{para}
 				</p>
 			))}
-
 			{isOwnPage ? (
 				additionalText.map((para, i) => (
 					<p className={`${css.Paragraph}`} key={i}>
@@ -48,11 +49,42 @@ const About: React.FC<AboutProps> = ({
 					</p>
 				))
 			) : (
-				<div className={`${css.ReadMoreContainer}`}>
-					<ReadMoreLink title="About Page" href="/about">
-						More About Us
-					</ReadMoreLink>
-				</div>
+				<>
+					<div className={`${css.IconContainer}`}>
+						<a
+							href="/services/bathroom-remodeling"
+							title="Bathroom Remodel | Hendersonville Home Remodel"
+						>
+							<img
+								src={BathroomIcon}
+								alt="Bathroom Remodel | Call Now for a Free Estimate"
+							/>
+						</a>
+						<a
+							href="/services/kitchen-remodeling"
+							title="Kitchen Remodel | Hendersonville Home Remodel"
+						>
+							<img
+								src={KitchenIcon}
+								alt="Kitchen Remodel | Call Now for a Free Estimate"
+							/>
+						</a>
+						<a
+							href="/services/new-home-construction"
+							title="New Home Construction | Hendersonville Home Remodel"
+						>
+							<img
+								src={HomeIcon}
+								alt="Home Remodel | Call Now for a Free Estimate"
+							/>
+						</a>
+					</div>
+					<div className={`${css.ReadMoreContainer}`}>
+						<ReadMoreLink title="About Page" href="/about">
+							More About Us
+						</ReadMoreLink>
+					</div>
+				</>
 			)}
 		</div>
 	);

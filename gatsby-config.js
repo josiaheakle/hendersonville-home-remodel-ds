@@ -36,7 +36,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Playfair Display`, `Source Sans Pro`
+          `Alfa Slab One`, `Open Sans`
         ],
       }
     }

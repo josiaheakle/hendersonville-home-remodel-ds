@@ -57,16 +57,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 	);
 };
 
-export const query = graphql`
-	query ImageQuery($src: String) {
-		allImageSharp(filter: { original: { src: { in: [$src] } } }) {
-			edges {
-				node {
-					gatsbyImageData
-				}
-			}
-		}
-	}
-`;
+// export const query = graphql`
+// 	query ImageQuery($src: String) {
+// 		allImageSharp(filter: { original: { src: { in: [$src] } } }) {
+// 			edges {
+// 				node {
+// 					gatsbyImageData
+// 				}
+// 			}
+// 		}
+// 	}
+// `;
 
 export { ServiceCard };

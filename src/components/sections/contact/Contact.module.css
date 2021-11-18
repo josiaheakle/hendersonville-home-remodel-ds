@@ -1,21 +1,19 @@
-.Contact {
+section.Contact {
+	width: 100vw;
+	max-width: 100vw;
+	min-height: 60vh;
+	position: relative;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .Heading {
-	/* margin-left: 20vw; */
-	/* margin-bottom: 1rem; */
-	padding: 1rem;
-	margin-bottom: 2rem;
-	max-width: fit-content;
+	width: 60vw;
+	padding: 2rem 20vw;
 	color: var(--light-color);
-	backdrop-filter: blur(0.5rem);
-	border-radius: var(--border-radius);
-	background-color: var(--header-color);
+	background-color: var(--primary-color);
 }
 
 .BgImageContainer {
@@ -55,19 +53,13 @@
 }
 
 .ContactBanner {
-	/* width: 80vw; */
-	/* padding: 0 10vw 0 10vw; */
-	/* display: flex; */
-	/* flex-direction: row; */
-	/* align-items: center; */
-	/* justify-content: space-evenly; */
-	/* position: absolute; */
-	/* bottom: 8rem; */
-	/* height: 6rem; */
+	position: absolute;
+	right: 20vw;
 }
 
 .Seperator {
-	color: var(--light-color);
+	color: var(--contrast-color);
+	padding: 0.5rem 1rem 1rem 1rem;
 	font-variant: small-caps;
 }
 
@@ -92,7 +84,7 @@
 	color: var(--contrast-color);
 
 	margin-bottom: 2rem;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 .FormSubmit {
@@ -107,43 +99,29 @@
 		/* margin-left: 20vw; */
 	}
 
-	.Heading {
-		margin: 2rem;
-	}
-
-	.Contact {
-		display: flex;
-		flex-direction: row;
+	section.Contact {
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		flex-wrap: wrap;
 		padding-top: 2rem;
+	}
+
+	.Heading {
+		margin-top: 2rem;
+		padding: 1rem 10vw 2rem 10vw;
+		width: 80vw;
 	}
 
 	.ContactBanner {
-		background-color: var(--header-color);
 		position: relative;
-		flex-direction: column;
-		height: fit-content;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-		width: fit-content;
-		top: 0;
-		bottom: 0;
-		border-radius: var(--border-radius);
+		right: unset;
+		top: -2rem;
 	}
 
 	.ContactInfo {
 		width: auto;
 		padding: 0;
 		margin-bottom: 1rem;
-		/* text-align: center; */
-		/* align-items: center; */
-	}
-
-	.Seperator {
-		color: var(--light-color);
-		padding: 1rem;
 	}
 
 	.FormHeader {
