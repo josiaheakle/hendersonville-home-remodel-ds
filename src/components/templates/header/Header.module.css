@@ -1,9 +1,9 @@
 .Header {
 	z-index: 100;
-	width: 80vw;
+	width: 84vw;
 	height: calc(var(--header-height) - 2rem);
 
-	padding: 1rem 10vw 1rem 10vw;
+	padding: 1rem 8vw 1rem 8vw;
 
 	position: fixed;
 	top: 0;

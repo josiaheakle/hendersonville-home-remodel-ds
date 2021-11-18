@@ -60,9 +60,9 @@
 .Subtitle {
 	margin-bottom: 0;
 	font-size: var(--h4);
-
-	color: var(--dark-color);
-	font-weight: bold;
+	font-family: var(--header-font);
+	color: var(--light-color);
+	text-shadow: 0.2rem 0.2rem var(--primary-color);
 }
 
 .ContactForm {
