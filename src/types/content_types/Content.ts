@@ -17,7 +17,7 @@ interface ContactData {
 interface AttributionsData {
 	link: string;
 	title: string;
-	authors: string[];
+	authors: Array<{ link?: string; name: string }>;
 }
 
 interface HeroData {

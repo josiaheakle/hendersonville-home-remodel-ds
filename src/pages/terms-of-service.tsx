@@ -5,6 +5,8 @@ import { PageTemplate } from "../components/templates/PageTemplate";
 import content from "../content/Content.json";
 import { ContentData } from "../types/content_types/Content";
 
+import * as css from "../assets/Page.module.css";
+
 interface PrivatePolicyPageProps {}
 
 const PrivatePolicyPage: React.FC<PrivatePolicyPageProps> = ({}) => {
@@ -54,16 +56,23 @@ const PrivatePolicyPage: React.FC<PrivatePolicyPageProps> = ({}) => {
 					Professional from one of our lead generation websites, you must
 					address such dispute with the Service Professional directly.
 				</p>
-				<p>
+				<ul className={`${css.AttributionList}`}>
 					Photos provided by{" "}
-					{attributions[0].authors.map(
-						(a, i) =>
-							`${a}${i === attributions[0].authors.length - 2 ? " and " : ""}${
-								i >= attributions[0].authors.length - 2 ? "" : ", "
-							}`
-					)}{" "}
-					at <a href={attributions[0].link}>{attributions[0].title}</a>
-				</p>
+					{attributions.map((atr, index) => {
+						return (
+							<li key={index}>
+								{atr.authors.map((a, i) => (
+									<>
+										<a href={a.link}>{a.name}</a>
+										{i >= attributions[index].authors.length - 1 ? null : ", "}
+									</>
+								))}{" "}
+								at <a href={atr.link}>{atr.title}</a>{" "}
+								{index >= attributions.length - 1 ? null : " and"}
+							</li>
+						);
+					})}
+				</ul>
 			</div>
 		</PageTemplate>
 	);
