@@ -23,7 +23,8 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
 	activePage,
 	...props
 }) => {
-	const { siteData } = content as unknown as ContentData;
+	content as unknown as ContentData;
+	const { siteData } = content;
 	return (
 		<div
 			className={`${className ?? ""} ${!isHomepage ? "page" : ""}`}
@@ -39,7 +40,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
 				activePage={activePage}
 			/>
 			{children}
-			<Footer siteData={siteData} />
+			<Footer contentData={content} />
 		</div>
 	);
 };

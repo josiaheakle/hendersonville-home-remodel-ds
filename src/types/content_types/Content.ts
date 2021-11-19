@@ -71,4 +71,4 @@ interface ContentData {
 	attributions: AttributionsData;
 }
 
-export type { ContentData, LocationData, ContactData, ServicesData };
+export type { SiteData, ContentData, LocationData, ContactData, ServicesData };

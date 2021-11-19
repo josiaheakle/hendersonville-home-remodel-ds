@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Helmet } from "react-helmet";
 
-import { SiteData } from "../../types/content_types/SiteData";
+import { SiteData } from "../../types/content_types/Content";
 
 interface SEOTemplateProps {
 	siteData: SiteData;

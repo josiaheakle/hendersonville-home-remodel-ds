@@ -1,23 +1,33 @@
 import * as React from "react";
-import { SiteData } from "../../../types/content_types/SiteData";
-import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 
-import * as css from "./Footer.module.css";
+import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 import { Sitemap } from "./sitemap/Sitemap";
 
+import { ContentData } from "../../../types/content_types/Content";
+
+import FacebookIcon from "../../../assets/images/icons/facebook.svg";
+import YoutubeIcon from "../../../assets/images/icons/youtube.svg";
+
+import * as css from "./Footer.module.css";
+
 interface FooterProps extends React.HTMLProps<HTMLDivElement> {
-	siteData: SiteData;
+	contentData: ContentData;
 }
 
-const Footer: React.FC<FooterProps> = ({ className, siteData, ...props }) => {
+const Footer: React.FC<FooterProps> = ({
+	className,
+	contentData,
+	...props
+}) => {
+	const { siteData, contact } = contentData;
 	return (
 		<footer {...props} className={`${className || ""} ${css.Footer}`}>
 			<Sitemap className={`${css.Sitemap}`} />
 			<CallNowButton className={`${css.CallButton}`} />
 			<span id="brand-copyright">
-				© 2021 {siteData.title}.
-				<br />
+				<br />© 2021 {siteData.title}.
 				<span className={`${css.PrivatePolicy}`}>
+					<br />
 					<a className={`link ${css.left}`} href="/terms-of-service">
 						Terms of Services
 					</a>
@@ -26,14 +36,25 @@ const Footer: React.FC<FooterProps> = ({ className, siteData, ...props }) => {
 						Private Policy
 					</a>
 					.
+					<br />
+					Website created by{" "}
+					<a className={`link ${css.right}`} href="https://www.josiaheakle.com">
+						Josiah Eakle
+					</a>
+					.
 				</span>
 			</span>
-			<span id="created-by" className={css.CreatedBy}>
-				Website created by{" "}
-				<a className="link" href="https://www.josiaheakle.com">
-					Josiah Eakle
-				</a>
-				.
+			<span id="social-links" className={css.SocialLinks}>
+				{contact.facebook ? (
+					<a href={contact.facebook} title={`${contentData.title} Facebook`}>
+						<img src={FacebookIcon} alt={`${contentData.title} Facebook`} />
+					</a>
+				) : null}
+				{contact.youtube ? (
+					<a href={contact.youtube} title={`${contentData.title} YouTube`}>
+						<img src={YoutubeIcon} alt={`${contentData.title} YouTube`} />
+					</a>
+				) : null}
 			</span>
 		</footer>
 	);

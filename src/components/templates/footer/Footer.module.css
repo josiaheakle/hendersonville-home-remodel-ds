@@ -16,8 +16,21 @@
 	padding-bottom: 1rem;
 }
 
-.CreatedBy {
+.SocialLinks {
 	text-align: right;
+}
+
+.SocialLinks img {
+	padding: 0.5rem;
+	width: auto;
+	max-width: 3rem;
+	height: 2.5rem;
+	transition: transform var(--anim-length);
+}
+
+.SocialLinks img:hover,
+.SocialLinks img:focus-visible {
+	transform: scale(1.2);
 }
 
 .Sitemap {

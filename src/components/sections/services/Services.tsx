@@ -16,7 +16,6 @@ const Services: React.FC<ServicesProps> = ({
 	subtitle,
 	services,
 }) => {
-	console.log({ title, subtitle, services });
 	const content = (
 		<>
 			<span className={`${css.Subtitle}`}>{subtitle}</span>
@@ -28,7 +27,6 @@ const Services: React.FC<ServicesProps> = ({
 			<div className={` ${css.ServicesContainer}`}>
 				{services.map((service, index) => {
 					if (!isOwnPage && index > 2) return null;
-					console.log({ service, index });
 					return (
 						<ServiceCard
 							className={`${index % 2 === 0 ? "" : css.rightAlign}`}
