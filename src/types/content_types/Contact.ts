@@ -7,4 +7,6 @@ export interface ContactData {
 		state: string;
 		zip: string;
 	};
+	Facebook: string;
+	YouTube: string;
 }
