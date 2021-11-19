@@ -56,13 +56,13 @@ const PrivatePolicyPage: React.FC<PrivatePolicyPageProps> = ({}) => {
 				</p>
 				<p>
 					Photos provided by{" "}
-					{attributions.authors.map(
+					{attributions[0].authors.map(
 						(a, i) =>
-							`${a}${i === attributions.authors.length - 2 ? " and " : ""}${
-								i >= attributions.authors.length - 2 ? "" : ", "
+							`${a}${i === attributions[0].authors.length - 2 ? " and " : ""}${
+								i >= attributions[0].authors.length - 2 ? "" : ", "
 							}`
 					)}{" "}
-					at <a href={attributions.link}>{attributions.title}</a>
+					at <a href={attributions[0].link}>{attributions[0].title}</a>
 				</p>
 			</div>
 		</PageTemplate>

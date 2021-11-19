@@ -68,7 +68,7 @@ interface ContentData {
 	about: TextSection;
 	services: ServicesData;
 	location: LocationData;
-	attributions: AttributionsData;
+	attributions: Array<AttributionsData>;
 }
 
 export type { SiteData, ContentData, LocationData, ContactData, ServicesData };
