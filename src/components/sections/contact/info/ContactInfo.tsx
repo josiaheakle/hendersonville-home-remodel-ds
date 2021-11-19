@@ -1,12 +1,12 @@
 import * as React from "react";
 
-import contactData from "../../../../content/Contact.json";
-import { ContactData } from "../../../../types/content_types/Contact";
+import content from "../../../../content/Content.json";
 
 import PhoneIcon from "../../../../assets/images/icons/phone-call.svg";
 import HomeIcon from "../../../../assets/images/icons/homepage.svg";
 
 import * as css from "./ContactInfo.module.css";
+import { ContentData } from "../../../../types/content_types/Content";
 
 interface ContactInfoProps {
 	phoneNumber?: string;
@@ -23,29 +23,26 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
 	hidden,
 	className,
 }) => {
-	contactData as ContactData;
+	const { contact } = content as unknown as ContentData;
 	return (
 		<address
 			className={`${css.ContactInfo} ${hidden ? css.hidden : ""} ${className} `}
 		>
-			<a
-				className={`${css.Phone} link`}
-				href={`tel:${contactData.phoneNumber}`}
-			>
+			<a className={`${css.Phone} link`} href={`tel:${contact.phoneNumber}`}>
 				<img
 					className={`${css.ContactIcon}`}
 					src={PhoneIcon}
 					alt="Phone Icon"
 				/>
-				{contactData.phoneNumber}
+				{contact.phoneNumber}
 			</a>
 			<span className={`${css.AddressContainer}`}>
 				<img className={`${css.ContactIcon}`} src={HomeIcon} alt="House Icon" />
 				<span>
-					<span>{contactData.address.street}</span> <br />
+					<span>{contact.address.street}</span> <br />
 					<span>
-						{contactData.address.city}, {contactData.address.state}{" "}
-						{contactData.address.zip}{" "}
+						{contact.address.city}, {contact.address.state}{" "}
+						{contact.address.zip}{" "}
 					</span>
 				</span>
 			</span>

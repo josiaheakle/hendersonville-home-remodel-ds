@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import siteData from "../../../../content/SiteData.json";
-import { SiteData } from "../../../../types/content_types/SiteData";
+import content from "../../../../content/Content.json";
+import { ContentData } from "../../../../types/content_types/Content";
 
 import * as css from "./Sitemap.module.css";
 import { SitemapLink } from "./SitemapLink";
@@ -9,7 +9,7 @@ import { SitemapLink } from "./SitemapLink";
 interface SitemapProps extends React.HTMLProps<HTMLDivElement> {}
 
 const Sitemap: React.FC<SitemapProps> = ({ className, ...props }) => {
-	siteData as SiteData;
+	const { siteData } = content as unknown as ContentData;
 	return (
 		<nav {...props} className={`${className || ""} ${css.Sitemap}`}>
 			<span className={`${css.Heading}`}>Page Links</span>
@@ -19,7 +19,7 @@ const Sitemap: React.FC<SitemapProps> = ({ className, ...props }) => {
 						key={i}
 						className={css.Link}
 						title={page.title}
-						href={page.page}
+						href={page.page || ""}
 					/>
 				))}
 			</ul>

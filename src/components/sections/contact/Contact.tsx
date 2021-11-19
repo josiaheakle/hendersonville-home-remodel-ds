@@ -1,24 +1,18 @@
 import * as React from "react";
-import { ContactInfo } from "./info/ContactInfo";
-import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 
-import contactData from "../../../content/Contact.json";
+import { StaticImage } from "gatsby-plugin-image";
+import { ContactInfo } from "./info/ContactInfo";
+import { LeadBuyerForm } from "./forms/LeadBuyerForm";
+
+import { useInView } from "react-intersection-observer";
 
 import * as css from "./Contact.module.css";
-
-import { ContactForm } from "./forms/ContactForm";
-import { ContactData } from "../../../types/content_types/Contact";
-import { StaticImage } from "gatsby-plugin-image";
-import { useInView } from "react-intersection-observer";
-import { LeadBuyerForm } from "./forms/LeadBuyerForm";
 
 interface ContactProps {
 	isOwnPage?: boolean;
 }
 
 const Contact: React.FC<ContactProps> = ({ isOwnPage }) => {
-	contactData as ContactData;
-
 	const { ref, inView, entry } = useInView({
 		threshold: 0,
 	});

@@ -3,13 +3,13 @@ import { ContactInfo } from "../components/sections/contact/info/ContactInfo";
 
 import { PageTemplate } from "../components/templates/PageTemplate";
 
-import siteData from "../content/SiteData.json";
-import { SiteData } from "../types/content_types/SiteData";
+import content from "../content/Content.json";
+import { ContentData } from "../types/content_types/Content";
 
 interface PrivatePolicyPageProps {}
 
 const PrivatePolicyPage: React.FC<PrivatePolicyPageProps> = ({}) => {
-	siteData as SiteData;
+	const { siteData } = content as unknown as ContentData;
 	const buisnessTitle = siteData.title;
 	return (
 		<PageTemplate activePage="/private-policy" isHomepage={false}>

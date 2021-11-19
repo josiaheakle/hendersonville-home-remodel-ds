@@ -4,8 +4,8 @@ import { SEOTemplate } from "./SEOTemplate";
 import { Header } from "./header/Header";
 import { Footer } from "./footer/Footer";
 
-import siteData from "../../content/SiteData.json";
-import { SiteData } from "../../types/content_types/SiteData";
+import content from "../../content/Content.json";
+import { ContentData } from "../../types/content_types/Content";
 
 interface PageTemplateProps extends React.HTMLProps<HTMLDivElement> {
 	isHomepage: boolean;
@@ -23,7 +23,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
 	activePage,
 	...props
 }) => {
-	siteData as SiteData;
+	const { siteData } = content as unknown as ContentData;
 	return (
 		<div
 			className={`${className ?? ""} ${!isHomepage ? "page" : ""}`}

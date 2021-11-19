@@ -1,31 +1,31 @@
 import * as React from "react";
+import { ServicesData } from "../../../types/content_types/Content";
 
 import { Button } from "../../ui/buttons/Button";
-import { ReadMoreLink } from "../../ui/links/ReadMoreLink";
 import { ServiceCard } from "./ServiceCard";
-
-import { ServicesData } from "../../../types/content_types/Services";
-import servicesData from "../../../content/Services.json";
 
 import * as css from "./Services.module.css";
 
-interface ServicesProps {
-	// data: ServicesData;
+interface ServicesProps extends ServicesData {
 	isOwnPage?: boolean;
 }
 
-const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
-	servicesData as ServicesData;
+const Services: React.FC<ServicesProps> = ({
+	isOwnPage,
+	title,
+	subtitle,
+	services,
+}) => {
 	const content = (
 		<>
-			<span className={`${css.Subtitle}`}>{servicesData.subtitle}</span>
+			<span className={`${css.Subtitle}`}>{subtitle}</span>
 			{isOwnPage ? (
-				<h1 className={`${css.Title}`}>{servicesData.title}</h1>
+				<h1 className={`${css.Title}`}>{title}</h1>
 			) : (
-				<h2 className={`${css.Title}`}>{servicesData.title}</h2>
+				<h2 className={`${css.Title}`}>{title}</h2>
 			)}
 			<div className={` ${css.ServicesContainer}`}>
-				{servicesData.services.map((service, index) => {
+				{services.map((service, index) => {
 					if (!isOwnPage && index > 2) return null;
 					console.log({ service, index });
 					return (

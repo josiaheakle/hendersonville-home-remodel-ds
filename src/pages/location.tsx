@@ -5,18 +5,16 @@ import { Location } from "../components/sections/location/Location";
 import { PageTemplate } from "../components/templates/PageTemplate";
 
 // data
-import locationData from "../content/Location.json";
-
-// types
-import { Location as LocationDataType } from "../types/content_types/Location";
+import content from "../content/Content.json";
+import { ContentData } from "../types/content_types/Content";
 
 interface aboutProps {}
 
 const about: React.FC<aboutProps> = ({}) => {
-	locationData as LocationDataType;
+	const { location } = content as unknown as ContentData;
 	return (
 		<PageTemplate isHomepage={false} activePage="/location">
-			<Location isOwnPage={true} {...locationData} />
+			<Location isOwnPage={true} {...location} />
 		</PageTemplate>
 	);
 };

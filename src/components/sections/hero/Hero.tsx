@@ -4,11 +4,9 @@ import { LearnMoreButton } from "../../ui/buttons/LearnMoreButton/LearnMoreButto
 import { StaticImage } from "gatsby-plugin-image";
 import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
 
-import * as css from "./Hero.module.css";
-
-import { useIsMobile } from "../../../hooks/ReactiveHooks";
-
 import { Image } from "../../../types/content_types/reusable/Image";
+
+import * as css from "./Hero.module.css";
 
 interface HeroProps {
 	image: Image;
@@ -18,8 +16,6 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ image, subtitle, title }) => {
-	const isMobile = useIsMobile();
-
 	return (
 		<section id="Home" className={`${css.Hero} section`}>
 			<div className={`${css.ContentContainer}`}>

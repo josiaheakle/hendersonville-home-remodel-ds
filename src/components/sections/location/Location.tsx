@@ -1,14 +1,15 @@
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import { useIsMobile } from "../../../hooks/ReactiveHooks";
-import { Location as LocationType } from "../../../types/content_types/Location";
-import { CallNowButton } from "../../ui/buttons/CallNowButton/CallNowButton";
+
+import { StaticImage } from "gatsby-plugin-image";
 import { ReadMoreLink } from "../../ui/links/ReadMoreLink";
-import { ContactInfo } from "../contact/info/ContactInfo";
+
+import { useIsMobile } from "../../../hooks/ReactiveHooks";
+
+import { LocationData } from "../../../types/content_types/Content";
 
 import * as css from "./Location.module.css";
 
-interface LocationProps extends LocationType {
+interface LocationProps extends LocationData {
 	isOwnPage?: boolean;
 }
 

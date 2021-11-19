@@ -11,41 +11,31 @@ import { Location } from "../components/sections/location/Location";
 import { CallNowButton } from "../components/ui/buttons/CallNowButton/CallNowButton";
 
 // content
-import heroData from "../content/Hero.json";
-import aboutData from "../content/About.json";
-import contactData from "../content/Contact.json";
-import locationData from "../content/Location.json";
-
-// types
-import { HeroData as HeroDataType } from "../types/content_types/Hero";
-import { TextSection as AboutDataType } from "../types/content_types/TextSection";
-import { ContactData as ContactDataType } from "../types/content_types/Contact";
-import { Location as LocationDataType } from "../types/content_types/Location";
+import content from "../content/Content.json";
 
 // css
 import "../assets/index.css";
 import * as css from "../assets/Page.module.css";
+import { ContentData } from "../types/content_types/Content";
 
 interface IndexPageProps {}
 
 const IndexPage: React.FC<IndexPageProps> = ({}) => {
-	heroData as HeroDataType;
-	aboutData as AboutDataType;
-	contactData as ContactDataType;
-	locationData as LocationDataType;
+	const { hero, about, services, location } = content as unknown as ContentData;
+
 	return (
 		<PageTemplate isHomepage={true} activePage="/">
 			<main>
-				<Hero {...heroData} linkTo="#services" />
-				<About {...aboutData} />
+				<Hero {...hero} linkTo="#services" />
+				<About {...about} />
 				<div className={`${css.CallNowBanner}`}>
 					<span>
 						Looking for a free quote?
 						<CallNowButton />
 					</span>
 				</div>
-				<Services />
-				<Location {...locationData} />
+				<Services {...services} />
+				<Location {...location} />
 				<Contact />
 			</main>
 		</PageTemplate>

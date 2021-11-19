@@ -2,16 +2,13 @@ import * as React from "react";
 
 import { PageTemplate } from "../components/templates/PageTemplate";
 
-import attrData from "../content/Attributions.json";
-import siteData from "../content/SiteData.json";
-
-import { SiteData } from "../types/content_types/SiteData";
-import { Attributions as AttrData } from "../types/content_types/Attributions";
+import content from "../content/Content.json";
+import { ContentData } from "../types/content_types/Content";
 
 interface PrivatePolicyPageProps {}
 
 const PrivatePolicyPage: React.FC<PrivatePolicyPageProps> = ({}) => {
-	siteData as SiteData;
+	const { siteData, attributions } = content as unknown as ContentData;
 	const buisnessTitle = siteData.title;
 	return (
 		<PageTemplate activePage="/private-policy" isHomepage={false}>
@@ -59,16 +56,13 @@ const PrivatePolicyPage: React.FC<PrivatePolicyPageProps> = ({}) => {
 				</p>
 				<p>
 					Photos provided by{" "}
-					{attrData.attributions[0].authors.map(
+					{attributions.authors.map(
 						(a, i) =>
-							`${a}${
-								i === attrData.attributions[0].authors.length - 2 ? " and " : ""
-							}${i >= attrData.attributions[0].authors.length - 2 ? "" : ", "}`
+							`${a}${i === attributions.authors.length - 2 ? " and " : ""}${
+								i >= attributions.authors.length - 2 ? "" : ", "
+							}`
 					)}{" "}
-					at{" "}
-					<a href={attrData.attributions[0].link}>
-						{attrData.attributions[0].title}
-					</a>
+					at <a href={attributions.link}>{attributions.title}</a>
 				</p>
 			</div>
 		</PageTemplate>
