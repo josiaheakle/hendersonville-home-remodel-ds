@@ -35,17 +35,19 @@ const IndexPage: React.FC<IndexPageProps> = ({}) => {
 	locationData as LocationDataType;
 	return (
 		<PageTemplate isHomepage={true} activePage="/">
-			<Hero {...heroData} linkTo="#services" />
-			<About {...aboutData} />
-			<div className={`${css.CallNowBanner}`}>
-				<span>
-					Looking for a free quote?
-					<CallNowButton />
-				</span>
-			</div>
-			<Services />
-			<Location {...locationData} />
-			<Contact />
+			<main>
+				<Hero {...heroData} linkTo="#services" />
+				<About {...aboutData} />
+				<div className={`${css.CallNowBanner}`}>
+					<span>
+						Looking for a free quote?
+						<CallNowButton />
+					</span>
+				</div>
+				<Services />
+				<Location {...locationData} />
+				<Contact />
+			</main>
 		</PageTemplate>
 	);
 };

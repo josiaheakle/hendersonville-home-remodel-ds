@@ -4,16 +4,14 @@ import * as css from "./Services.module.css";
 
 // types
 import { Image } from "../../../types/content_types/reusable/Image";
-import { splitAtSpace } from "../../../utlis/string-utils";
-import { GatsbyImage } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser";
-import { StaticImage } from "gatsby-plugin-image";
-import { GatsbyGraphQLType, graphql } from "gatsby";
+import { graphql, StaticQuery, useStaticQuery } from "gatsby";
+import { GatsbyImage, GatsbyImageProps } from "gatsby-plugin-image";
 
 interface ServiceCardProps {
 	title: string;
 	summary: string[];
 	slug: string;
-	image?: Image;
+	image?: GatsbyImageProps;
 	isOwnPage?: boolean;
 	className?: string;
 	src: string;
@@ -28,18 +26,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 	className,
 	...props
 }) => {
-	console.log({ props });
+	const imgData = useStaticQuery(graphql`
+		query MyQuery {
+			file(relativePath: { eq: "contact.jpg" }) {
+				childImageSharp {
+					gatsbyImageData
+				}
+			}
+		}
+	`);
 	return (
 		<article className={`${css.Service} ${className}`}>
-			{/* {image ? (
-				<div className={`${css.ImageContainer}`}>
-					<StaticImage
-						alt={image.alt}
-						title={image.title}
-						src={`../../../assets/images/services${image.src}`}
-					/>
-				</div>
-			) : null} */}
+			{image ? <GatsbyImage alt="alt" image={image.image} /> : null}
 			{isOwnPage ? (
 				<h2 className={css.ServiceTitle}>{title}</h2>
 			) : (
@@ -56,17 +54,5 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 		</article>
 	);
 };
-
-// export const query = graphql`
-// 	query ImageQuery($src: String) {
-// 		allImageSharp(filter: { original: { src: { in: [$src] } } }) {
-// 			edges {
-// 				node {
-// 					gatsbyImageData
-// 				}
-// 			}
-// 		}
-// 	}
-// `;
 
 export { ServiceCard };

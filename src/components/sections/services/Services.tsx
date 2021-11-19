@@ -10,6 +10,7 @@ import servicesData from "../../../content/Services.json";
 import * as css from "./Services.module.css";
 
 interface ServicesProps {
+	// data: ServicesData;
 	isOwnPage?: boolean;
 }
 
@@ -35,7 +36,7 @@ const Services: React.FC<ServicesProps> = ({ isOwnPage }) => {
 							slug={service.slugs ? service.slugs[0] : ""}
 							title={service.title}
 							summary={service.summary}
-							image={service.image}
+							// image={service.image}
 							src={service.image?.src || ""}
 						/>
 					);

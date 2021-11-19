@@ -1,31 +1,20 @@
 html {
-	/* 	--primary-color: #34416fff;
-	--highlight-color: #8f8095ff;
-	--contrast-color: #ee9535ff;
-	--light-color: #f5f3f6;
-	--dark-color: #0b0704ff; */
+	margin: 0;
+	padding: 0;
 
-	--cafe-au-lait: #aa7a49ff;
-	--baby-blue: #95d6f2ff;
-	--snow: #fbf8f6ff;
-	--grullo: #a89785ff;
-	--coffee: #735135ff;
+	overflow-x: hidden;
 
+	font-family: var(--body-font);
+	font-display: swap;
+	color: var(--dark-color);
+
+	/* COLORS */
 	--primary-color: #5f4f41;
 	--highlight-color: #3d3229;
 	--contrast-color: #f69333;
-
-	/* CHANGE SVG COLORS IF CONTRAST COLOR CHANGES */
 	--light-color: #fbf8f6ff;
 	--dark-color: #0b0704ff;
-
 	--transparent-color: #fbf8f6c5;
-	--header-color: #5f4f41c5;
-
-	/* FONTS */
-	--header-font: "Alfa Slab One", cursive;
-	--body-font: "Open Sans", sans-serif;
-	--small-font-size: 0.85rem;
 
 	/* MEASURMENTS */
 	--header-height: 6rem;
@@ -33,6 +22,12 @@ html {
 	--mobile-width-break: 64rem;
 	--border-radius: 1rem;
 
+	/* FONTS */
+	--header-font: "Alfa Slab One", cursive;
+	--body-font: "Open Sans", sans-serif;
+	--small-font-size: 0.85rem;
+
+	/* FONT SIZES */
 	--h1: 3.052rem;
 	--h2: 2.441rem;
 	--h3: 1.953rem;
@@ -41,22 +36,12 @@ html {
 
 	/* ANIM */
 	--anim-length: 250ms;
-
-	color: var(--dark-color);
-}
-
-html {
-	overflow-x: hidden;
-	font-family: var(--body-font);
-	margin: 0;
-	padding: 0;
-	font-display: swap;
 }
 
 body {
 	background-color: var(--light-color);
-	color: var(--dark-color);
 	font-family: var(--body-font);
+	color: var(--dark-color);
 	margin: 0;
 	padding: 0;
 }
@@ -110,16 +95,10 @@ small,
 .subtitle {
 	margin-bottom: 0;
 	font-size: var(--h5);
-	/* color: var(---color); */
 }
 
 .title {
 	color: var(--contrast-color);
-}
-
-.not-found {
-	text-align: center;
-	margin-top: 2rem;
 }
 
 .section {

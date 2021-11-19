@@ -1,13 +1,15 @@
 import * as React from "react";
+
 import { PageTemplate } from "../components/templates/PageTemplate";
-import { Button } from "../components/ui/buttons/Button";
+
+import * as css from "../assets/Page.module.css";
 
 interface NotFoundPageProps {}
 
 const NotFoundPage: React.FC<NotFoundPageProps> = ({}) => {
 	return (
 		<PageTemplate activePage="404" isHomepage={false}>
-			<main className={`not-found`}>
+			<main className={`${css.NotFound}`}>
 				Page not found
 				<br />
 				<a className="link" href="/">
