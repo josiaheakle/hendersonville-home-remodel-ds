@@ -31,12 +31,6 @@ const About: React.FC<AboutProps> = ({
 			) : (
 				<h2 className={`${css.Title}`}>{title}</h2>
 			)}
-			{/* <StaticImage
-				layout="constrained"
-				src="../../../assets/images/about.jpg"
-				alt="Kitchen renovation; Hendersonville Home remodel"
-				className={`${css.Image}`}
-			/> */}
 			{summary.map((para, i) => (
 				<p className={`${css.Paragraph}`} key={i}>
 					{para}

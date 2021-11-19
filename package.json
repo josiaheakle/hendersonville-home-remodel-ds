@@ -1,8 +1,8 @@
 {
-  "name": "dsf-template-site",
+  "name": "hendersonville-home-remodel",
   "version": "1.0.0",
   "private": true,
-  "description": "Template site for a digital storefront.",
+  "description": "Best Home Contractors in Hendersonville, TN!",
   "author": "Josiah Eakle",
   "keywords": [
     "gatsby"
@@ -26,6 +26,7 @@
     "gatsby-plugin-sitemap": "^5.0.0",
     "gatsby-plugin-typescript": "^4.0.0",
     "gatsby-source-filesystem": "^4.0.0",
+    "gatsby-transformer-json": "^4.2.0",
     "gatsby-transformer-sharp": "^4.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
