@@ -16,6 +16,7 @@ const Services: React.FC<ServicesProps> = ({
 	subtitle,
 	services,
 }) => {
+	console.log({ title, subtitle, services });
 	const content = (
 		<>
 			<span className={`${css.Subtitle}`}>{subtitle}</span>

@@ -9,20 +9,20 @@ import { About } from "../components/sections/about/About";
 import { Contact } from "../components/sections/contact/Contact";
 import { Location } from "../components/sections/location/Location";
 import { CallNowButton } from "../components/ui/buttons/CallNowButton/CallNowButton";
+import { CallNowBanner } from "../components/ui/buttons/CallNowButton/CallNowBanner";
+
+// content
+import content from "../content/Content.json";
+
+import { ContentData } from "../types/content_types/Content";
 
 // css
 import "../assets/index.css";
-import * as css from "../assets/Page.module.css";
-import { ContentData } from "../types/content_types/Content";
-import { CallNowBanner } from "../components/ui/buttons/CallNowButton/CallNowBanner";
-import { graphql } from "gatsby";
 
-interface IndexPageProps {
-	data: unknown;
-}
+interface IndexPageProps {}
 
-const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
-	const { hero, about, services, location } = data as ContentData;
+const IndexPage: React.FC<IndexPageProps> = ({}) => {
+	const { hero, about, services, location } = content as unknown as ContentData;
 
 	return (
 		<PageTemplate isHomepage={true} activePage="/">
@@ -37,79 +37,5 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 		</PageTemplate>
 	);
 };
-
-export const query = graphql`
-	query {
-		contentJson {
-			about {
-				additionalText
-				image {
-					src
-					alt
-				}
-				subtitle
-				summary
-				title
-			}
-			attributions {
-				authors
-				link
-				title
-			}
-			contact {
-				facebook
-				youtube
-				address {
-					city
-					state
-					street
-					zip
-				}
-				email
-				phoneNumber
-			}
-			hero {
-				subtitle
-				title
-				image {
-					alt
-					src
-				}
-			}
-			location {
-				additionalText
-				city
-				state
-				subtitle
-				summary
-				title
-			}
-			services {
-				subtitle
-				title
-			}
-			siteData {
-				url
-				title
-				subtitle
-				pages {
-					linkElemId
-					page
-					title
-				}
-				image {
-					alt
-					src
-				}
-				icon {
-					alt
-					src
-				}
-				description
-			}
-			title
-		}
-	}
-`;
 
 export default IndexPage;

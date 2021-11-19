@@ -23,6 +23,7 @@ const About: React.FC<AboutProps> = ({
 	additionalText,
 	isOwnPage,
 }) => {
+	console.log({ title, subtitle, summary, additionalText, isOwnPage });
 	const content = (
 		<div className={`${css.AboutContent}`}>
 			{subtitle ? <span className={`${css.Subtitle}`}>{subtitle}</span> : null}
