@@ -1,10 +1,8 @@
 import * as React from "react";
 
-import * as css from "./Services.module.css";
+import * as css from "./ServicesPage.module.css";
 
 // types
-import { Image } from "../../../types/content_types/reusable/Image";
-import { graphql, StaticQuery, useStaticQuery } from "gatsby";
 import { GatsbyImage, GatsbyImageProps } from "gatsby-plugin-image";
 
 interface ServiceCardProps {
@@ -26,15 +24,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 	className,
 	...props
 }) => {
-	const imgData = useStaticQuery(graphql`
-		query MyQuery {
-			file(relativePath: { eq: "contact.jpg" }) {
-				childImageSharp {
-					gatsbyImageData
-				}
-			}
-		}
-	`);
 	return (
 		<article className={`${css.Service} ${className}`}>
 			{image ? <GatsbyImage alt="alt" image={image.image} /> : null}

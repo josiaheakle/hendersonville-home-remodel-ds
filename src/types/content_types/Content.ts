@@ -31,7 +31,7 @@ interface LocationData extends TextSection {
 	state: string;
 }
 
-interface Service {
+interface ServiceData {
 	slugs: string[];
 	title: string;
 	summary: string[];
@@ -43,7 +43,7 @@ interface Service {
 interface ServicesData {
 	title: string;
 	subtitle: string;
-	services: Service[];
+	services: ServiceData[];
 }
 
 interface SiteData {
@@ -71,4 +71,11 @@ interface ContentData {
 	attributions: Array<AttributionsData>;
 }
 
-export type { SiteData, ContentData, LocationData, ContactData, ServicesData };
+export type {
+	SiteData,
+	ContentData,
+	LocationData,
+	ContactData,
+	ServicesData,
+	ServiceData,
+};

@@ -4,7 +4,7 @@ import * as React from "react";
 // comps
 import { PageTemplate } from "../components/templates/PageTemplate";
 import { Hero } from "../components/sections/hero/Hero";
-import { Services } from "../components/sections/services/Services";
+import { Services } from "../components/sections/services/ServicesHomepage";
 import { About } from "../components/sections/about/About";
 import { Contact } from "../components/sections/contact/Contact";
 import { Location } from "../components/sections/location/Location";

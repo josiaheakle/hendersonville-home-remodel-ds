@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Services } from "../components/sections/services/Services";
+import { ServicesPage } from "../components/sections/services/services-page/ServicesPage";
 import { PageTemplate } from "../components/templates/PageTemplate";
 
 import content from "../content/Content.json";
@@ -12,7 +12,7 @@ const services: React.FC<servicesProps> = ({}) => {
 	const { services } = content as unknown as ContentData;
 	return (
 		<PageTemplate isHomepage={false} activePage="/services">
-			<Services isOwnPage={true} {...services} />
+			<ServicesPage {...services} />
 		</PageTemplate>
 	);
 };

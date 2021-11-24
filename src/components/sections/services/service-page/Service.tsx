@@ -3,7 +3,7 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import * as css from "./Service.module.css";
-import { DownArrow } from "../../ui/svg-icons/DownArrow";
+import { DownArrow } from "../../../ui/svg-icons/DownArrow";
 
 interface ServiceProps {
 	title: string;
@@ -22,7 +22,7 @@ const Service: React.FC<ServiceProps> = ({
 				<StaticImage
 					className={`${css.BgImage}`}
 					layout="fullWidth"
-					src="../../../assets/images/hero.jpg"
+					src="../../../../assets/images/contact.jpg"
 					alt=""
 				/>
 			</div>

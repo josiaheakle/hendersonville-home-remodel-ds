@@ -44,7 +44,7 @@
 	background-color: var(--transparent-color);
 	border-radius: calc(var(--border-radius) * 0.5);
 	padding: 0.5rem;
-	color: var(--dark-color);
+	color: var(--primary-color);
 	text-decoration: none;
 	display: flex;
 	flex-direction: row;

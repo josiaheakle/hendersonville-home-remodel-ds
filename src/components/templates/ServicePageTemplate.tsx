@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Service as ServiceType } from "../../types/content_types/Services";
-import { Service } from "../sections/services/Service";
+import { ServiceData } from "../../types/content_types/Content";
+import { Service } from "../sections/services/service-page/Service";
 import { PageTemplate } from "./PageTemplate";
 
 interface ServicePageTemplateProps {
 	pageContext: {
-		service: ServiceType;
+		service: ServiceData;
 	};
 }
 
