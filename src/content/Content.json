@@ -82,7 +82,7 @@
                 "title": "Bathroom Remodeling",
                 "altTitles": ["Bathroom Renovation"],
                 "summary": [
-                    "Where is the first place you go in the morning? What about the last place you go before bed? Your bathroom is your safe space, let us transform your bathroom into a safe haven. With our knowledge of the latest materials and techniques, your bathroom will be the perfect place to start and end each and every day..",
+                    "Where is the first place you go in the morning? What about the last place you go before bed? Your bathroom is your safe space, let us transform your bathroom into a safe haven. With our knowledge of the latest materials and techniques, your bathroom will be the perfect place to start and end each and every day.",
                     "Your tub and toilet are important steps to updating your bathroom. Maybe you’re looking for a cast iron tub, or porcelain tile for your bathtub? You may need a dual flush toilet, a bidet or a rounded bowl for a smaller space. ", 
                     "Next is your flooring. Our knowledge of the best flooring types for bathrooms will be crucial for your new bathroom. Your new floors could be porcelain or ceramic tile, maybe you want vinyl flooring but cannot decide on sheet, plank, tile, natural stone, engineered wood or laminate flooring.",
                     "Finally we finish with your countertops and cabinets. Our experience with the best countertop materials, such as laminate, ceramic/porcelain tile, solid-surface, natural stone, concrete, crushed glass, or quartz is sure to bring you exactly what you need."
@@ -108,9 +108,9 @@
             },{
                 "title": "Room Addition",
                 "summary": [
-                    "Need more space? A new room can be a big undertaking, make sure you choose the right team for the job. Our team of experts are deeply knowledgeable and experienced in home additions. "
+                    "Need more space? A new room can be a big undertaking, make sure you choose the right team for the job. Our team of experts are deeply knowledgeable and experienced in home additions.  "
                 ],
-                "additionalText": [""],
+                "additionalText": ["From our flooring and drywall experts to our licensed plumbers and electricians, our team has the tools and understanding to bring you the best room and home additions."],
                 "slugs": ["room-addition"]
             },{
                 "title": "New Home Construction",
@@ -123,8 +123,8 @@
                 "slugs": ["new-home-construction"]
             },{
                 "title": "Basement and Garage Renovation",
-                "summary": ["Basements and garages are notorious for having issues with water leaks and damage. We have seen it all and know the perfect solution for you. From mold removal, garage and basement waterproofing, and finishing basements from floor to ceiling, we can accomplish what you need."],
-                "additionalText": [""],
+                "summary": ["Basements and garages are notorious for having issues with water leaks and damage. From mold removal, garage and basement waterproofing, and finishing basements from floor to ceiling, we can do it all."],
+                "additionalText": ["We have seen it all and know the perfect solution for you. We know how to keep your basement dry, our water removal and mold experts terminate any moisture and mold in your basement, then our waterproofing team gets to work. Call us today to get started!"],
                 "slugs": ["home-remodeling"]
             }
         ]

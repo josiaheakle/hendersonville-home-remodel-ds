@@ -2,8 +2,12 @@ import * as React from "react";
 
 import { StaticImage } from "gatsby-plugin-image";
 
-import * as css from "./Service.module.css";
+import Content from "../../../../content/Content.json";
+
 import { DownArrow } from "../../../ui/svg-icons/DownArrow";
+import { Button } from "../../../ui/buttons/Button";
+
+import * as css from "./Service.module.css";
 
 interface ServiceProps {
 	title: string;
@@ -16,6 +20,7 @@ const Service: React.FC<ServiceProps> = ({
 	summary,
 	additionalText,
 }) => {
+	const phoneNum = Content.contact.phoneNumber;
 	return (
 		<main className="section">
 			<div className={`${css.BgContainer}`}>
@@ -42,6 +47,9 @@ const Service: React.FC<ServiceProps> = ({
 						{str}
 					</p>
 				))}
+				<a href={`tel:${phoneNum}`}>
+					<Button>Call Now for a Free Quote</Button>
+				</a>
 			</div>
 		</main>
 	);
