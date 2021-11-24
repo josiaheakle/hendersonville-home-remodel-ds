@@ -39,7 +39,7 @@ const LeadBuyerForm: React.FC<LeadBuyerFormProps> = ({
 			<TextInput name="phone" type="text" label="Phone" />
 			<TextInput name="email" type="email" label="Email" />
 			<TextAreaInput name="message" label="Brief Project Description" />
-			<Button className={`${css.FormSubmit}`}>GET A FREE QUOTE</Button>
+			<Button className={`${css.FormSubmit}`}>Get a Free Quote</Button>
 		</form>
 	);
 };
