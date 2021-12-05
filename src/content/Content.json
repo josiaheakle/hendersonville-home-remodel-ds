@@ -106,26 +106,24 @@
                 "additionalText": [""],
                 "slugs": ["kitchen-remodeling"]
             },{
-                "title": "Room Addition",
+                "title": "Bedroom Remodel",
                 "summary": [
-                    "Need more space? A new room can be a big undertaking, make sure you choose the right team for the job. Our team of experts are deeply knowledgeable and experienced in home additions.  "
+                    "Your bedroom is where you end each and every day, allow us to make that the most restful space you could ever imagine. Our understanding of the quality mattresses, light fixtures, curtains and furniture will prove to be the key in unlocking the best bedroom you could have. Our bedroom remodelers are ready to transform your bedroom today."
                 ],
-                "additionalText": ["From our flooring and drywall experts to our licensed plumbers and electricians, our team has the tools and understanding to bring you the best room and home additions."],
-                "slugs": ["room-addition"]
+                "additionalText": [],
+                "slugs": ["bedroom-remodel"]
             },{
-                "title": "New Home Construction",
+                "title": "Living Room Remodel",
                 "summary": [
-                    "Looking to build your dream home? A new construction is a massive undertaking, the right team decides whether this will be quick and painless or prolonged and miserable. This team will do everything you need with care and diligence.",
-                    "Starting with flooring, what type are you looking for? Are you looking for carpet? Does it need to be waterproof or stain-resistant? Do you need a design or a solid color? Maybe you want hardwood with area rugs? Whatever your needs we can find the perfect fit.",
-                    "From there we can design each room according to its needs. Maybe you want wallpaper, or a wet bar installed. You may need a mud room or dual ovens, whatever your needs, we are excited to create your new home. "
+                    "From gatherings to rainy restful days, your living room is the centerpiece of your home. Our living room remodelers’ years of working with the best sofas, coffee tables, curtains and living room furniture have taught us the best and most comfortable materials for your living room. Call us today for a free quote! "
                 ],
                 "additionalText": [""],
-                "slugs": ["new-home-construction"]
+                "slugs": ["living-room-remodel"]
             },{
-                "title": "Basement and Garage Renovation",
-                "summary": ["Basements and garages are notorious for having issues with water leaks and damage. From mold removal, garage and basement waterproofing, and finishing basements from floor to ceiling, we can do it all."],
-                "additionalText": ["We have seen it all and know the perfect solution for you. We know how to keep your basement dry, our water removal and mold experts terminate any moisture and mold in your basement, then our waterproofing team gets to work. Call us today to get started!"],
-                "slugs": ["home-remodeling"]
+                "title": "Garage Remodel",
+                "summary": ["Space utilization is vital in a functional garage. We transform a cluttered mess of a garage into an organized and appealing space. From utility shelf installation to automatic garage door installation, we do it all. Contact us today for a free quote!"],
+                "additionalText": [],
+                "slugs": ["garage-remodel"]
             }
         ]
     },
