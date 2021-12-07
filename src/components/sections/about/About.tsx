@@ -64,12 +64,12 @@ const About: React.FC<AboutProps> = ({
 							/>
 						</a>
 						<a
-							href="/services/new-home-construction"
-							title="New Home Construction | Hendersonville Home Remodel"
+							href="/services/living-room-remodel"
+							title="Living Room Remodel | Hendersonville Home Remodel"
 						>
 							<img
 								src={HomeIcon}
-								alt="Home Remodel | Call Now for a Free Estimate"
+								alt="Living Room Remodel | Call Now for a Free Estimate"
 							/>
 						</a>
 					</div>
