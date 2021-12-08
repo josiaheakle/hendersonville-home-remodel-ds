@@ -16,8 +16,8 @@
     "siteData": {
         "url": "https://www.hendersonvillehomeremodel.com",
         "title": "Hendersonville Home Remodel",
-        "subtitle": "Home Renovation Solutions from Flooring to Roofing",
-        "description": "The best and most affordable home remodeling service in Hendersonville, TN. We offer kitchen, bathroom, basement and garage renovation, as well as roofing and siding replacment and much more!",
+        "subtitle": "Home Renovation Solutions from Bed to Bath",
+        "description": "The best and most affordable home remodeling service in Hendersonville, TN. We offer kitchen, bathroom, basement and garage renovation and much more!",
         "image": {
             "src": "icons/icon.png",
             "alt": "Hendersonville Home Remodel Logo"
@@ -65,7 +65,7 @@
     "about" : {
         "title": "#1 Hendersonville Home Remodling",
         "subtitle": "Best Home Remodeling near Nashville TN",
-        "summary": ["Based in Hendersonville, Tennessee, Hendersonville Home Remodel was founded by an extensively experienced staff with a goal to create a worry-free experience for the customer. We strive to offer seamless, quality work at an affordable price. Our staff has a wide pool of skills vital to bathroom, basement, kitchen and home renovation including toilet installation, bathtub installation, cabinet installation, home flooring installation, kitchen countertops, bathroom countertops, and even basement waterproofing.", "Not only can we develop within existing rooms and homes we offer many more services, whether it be room additions, roof installation, siding replacement, or even custom home builders to create your dream home we can do it all. With access to tools to create whatever you need, we are the go to team for your home renovation needs. "],
+        "summary": ["Based in Hendersonville, Tennessee, Hendersonville Home Remodel was founded by an extensively experienced staff with a goal to create a worry-free experience for the customer. We strive to offer seamless, quality work at an affordable price. Our staff has a wide pool of skills vital to bathroom, basement, kitchen and home renovation including toilet installation, bathtub installation, cabinet installation, home flooring installation, kitchen countertops, bathroom countertops, and even garage door services."],
         "additionalText": [
             "Our mission is to treat each customer and their individual projects with our full respect and attention, from beginning to end. We strive to create a valuable relationship with each customer, in order to satisfy a lifetime of your needs. Contact us today and allow us to make your home remodeling project an easy and satisfying experience. "
         ],
@@ -85,7 +85,7 @@
                     "Where is the first place you go in the morning? What about the last place you go before bed? Your bathroom is your safe space, let us transform your bathroom into a safe haven. With our knowledge of the latest materials and techniques, your bathroom will be the perfect place to start and end each and every day.",
                     "Your tub and toilet are important steps to updating your bathroom. Maybe you’re looking for a cast iron tub, or porcelain tile for your bathtub? You may need a dual flush toilet, a bidet or a rounded bowl for a smaller space. ", 
                     "Next is your flooring. Our knowledge of the best flooring types for bathrooms will be crucial for your new bathroom. Your new floors could be porcelain or ceramic tile, maybe you want vinyl flooring but cannot decide on sheet, plank, tile, natural stone, engineered wood or laminate flooring.",
-                    "Finally we finish with your countertops and cabinets. Our experience with the best countertop materials, such as laminate, ceramic/porcelain tile, solid-surface, natural stone, concrete, crushed glass, or quartz is sure to bring you exactly what you need."
+                    "Finally we finish with your countertops and cabinets. Our experience with the best counter-top materials, such as laminate, ceramic/porcelain tile, solid-surface, natural stone, concrete, crushed glass, or quartz is sure to bring you exactly what you need."
                 ],
                 "additionalText": [""],
                 "slugs": ["bathroom-remodeling", "bathroom-renovation"],
