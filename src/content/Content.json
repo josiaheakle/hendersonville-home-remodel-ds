@@ -142,7 +142,9 @@
             "link": "https://www.pexels.com/",
             "title": "Pexels",
             "authors": [
-                "Vecislavas Popa, Houzlook.com", "pixabay", "Jean van der Meulen"
+                {"name": "Vecislavas Popa"},
+                {"name": "pixabay"},
+                {"name": "Jean van der Meulen"}
             ]
         }
     ]
