@@ -85,6 +85,8 @@ const Header: React.FC<HeaderProps> = ({
 					className={`${css.HeadingIcon}`}
 					src={BrandIcon}
 					alt={headerIcon.alt}
+					width="128px"
+					height="128px"
 				></img>
 				<span className={`${css.TitleContainer}`}>
 					<span className={`${css.Title}`}>{headerTitle}</span>
