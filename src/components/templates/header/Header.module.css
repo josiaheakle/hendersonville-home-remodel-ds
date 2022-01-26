@@ -38,8 +38,8 @@
 
 .HeadingIcon {
 	transition: padding var(--anim-length);
-	height: 100%;
-	width: auto;
+	width: 100%;
+	height: auto;
 	padding: 0.25rem;
 }
 
