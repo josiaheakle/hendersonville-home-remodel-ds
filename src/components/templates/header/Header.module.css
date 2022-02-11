@@ -40,6 +40,7 @@
 	transition: padding var(--anim-length);
 	width: auto;
 	height: 100%;
+	max-height: 8rem;
 }
 
 .large.Header .TitleContainer {
